@@ -1,0 +1,15 @@
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\ExcelWorkbook_Demo.dll
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\ExcelWorkbook_Demo.pdb
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\ExcelWorkbook_Demo.dll.manifest
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\ExcelWorkbook_Demo.vsto
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\ExcelWorkbook_Demo.xlsx
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.xml
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\obj\Debug\ExcelWorkbook_Demo.csprojResolveAssemblyReference.cache
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\obj\Debug\ExcelWorkbook_Demo.Properties.Resources.resources
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\obj\Debug\ExcelWorkbook_Demo.csproj.GenerateResource.Cache
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\obj\Debug\ExcelWorkbook_Demo.dll
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\obj\Debug\ExcelWorkbook_Demo.pdb
+D:\Programs\Excel\ExcelWorkbook_Demo\ExcelWorkbook_Demo\obj\Debug\ExcelAddIn1.Ribbon1.resources

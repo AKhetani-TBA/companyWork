@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ExcelAddInWithDatabaseConnectivity.dll" version="1.0.0.0" publicKeyToken="44a63f655b514115" language="neutral" processorArchitecture="msil" type="win32" />
+  <description xmlns="urn:schemas-microsoft-com:asm.v1">ExcelAddInWithDatabaseConnectivity</description>
+  <application />
+  <entryPoint>
+    <co.v1:customHostSpecified />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.Excel" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.v4.0.Framework" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.Tools.Applications.Runtime" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExcelAddInWithDatabaseConnectivity.dll" size="41984">
+      <assemblyIdentity name="ExcelAddInWithDatabaseConnectivity" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Ei7oWVx6b3QgemVtm/FwZAMYPyI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Office.Tools.Common.v4.0.Utilities.dll" size="32664">
+      <assemblyIdentity name="Microsoft.Office.Tools.Common.v4.0.Utilities" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>CtnCtseaMyfROIGe0ENdGO6arHg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ExcelAddInWithDatabaseConnectivity.dll.config" size="974">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Gr/edOQPu1u2nqRs/NvHnoWBLiI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <vstav3:addIn xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">
+    <vstav3:entryPointsCollection>
+      <vstav3:entryPoints>
+        <vstav3:entryPoint class="ExcelAddInWithDatabaseConnectivity.ThisAddIn">
+          <assemblyIdentity name="ExcelAddInWithDatabaseConnectivity" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+        </vstav3:entryPoint>
+      </vstav3:entryPoints>
+    </vstav3:entryPointsCollection>
+    <vstav3:update enabled="true">
+      <vstav3:expiration maximumAge="7" unit="days" />
+    </vstav3:update>
+    <vstav3:application>
+      <vstov4:customizations xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">
+        <vstov4:customization>
+          <vstov4:appAddIn application="Excel" loadBehavior="3" keyName="ExcelAddInWithDatabaseConnectivity">
+            <vstov4:friendlyName>ExcelAddInWithDatabaseConnectivity</vstov4:friendlyName>
+            <vstov4:description>ExcelAddInWithDatabaseConnectivity</vstov4:description>
+            <vstov4.1:ribbonTypes xmlns:vstov4.1="urn:schemas-microsoft-com:vsto.v4.1">
+              <vstov4.1:ribbonType name="ExcelAddInWithDatabaseConnectivity.Ribbon1, ExcelAddInWithDatabaseConnectivity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+            </vstov4.1:ribbonTypes>
+          </vstov4:appAddIn>
+        </vstov4:customization>
+      </vstov4:customizations>
+    </vstav3:application>
+  </vstav3:addIn>
+<publisherIdentity name="CN=VCMPARTNERS\akethani" issuerKeyHash="c98291424e4199fdc165c9f8f99e1c21fb5ba2aa" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>KcroE+WMVRV1X61MU7PLLr7MOl4=</DigestValue></Reference></SignedInfo><SignatureValue>EtZGeLMSD7BSWtOxYV/InWhzC0d/SieFhBDU/muVJT4PHprqtk5j88Peh/pIBbj4p+aus11FnerI264zc8yWD5ZjEYRZ3P7WNtN9W1u7bNn+1yEJKyrluNhI5LH8nNBOdESIUZWVvz/oC/h75Zg2eaWWs/zTIr1bOk/De3/2SUo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>lMkFxtswygb1Nejgli7FZK6frmLrV+yi9HZXLGFgPzS/nHZNvnwlpA1/nEhQ4P2kRabgh/lJuOqcYYVBIadql2pAtAPAsXHa2Znwp8kv+tQAIFc8cpKaETXhs9Nu9koLFNsGJKpEDe+jZscb0f3lg752Hd6ciDyC/7Vz0VEgiIk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5e3accbe2ecbb3534cad5f7515558ce513e8ca29" Description="" Url=""><as:assemblyIdentity name="ExcelAddInWithDatabaseConnectivity.dll" version="1.0.0.0" publicKeyToken="44a63f655b514115" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=VCMPARTNERS\akethani</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>dOGKYJy//XQeN5ZvsUTb8decKVs=</DigestValue></Reference></SignedInfo><SignatureValue>EAmZHeGEZw5cXx0YtXOGo7NqF6vmgaUtSNL4qWm66aHtiExxda5qHmmHWYJwG9A+78USbirYyaT3+G/A7QJqarTcIumyxwIlAVL7DQyhA6hHGV56YMZKviwu9Urn4wyGA8EAIqKxaobpPscKUoXNGoHrou3DbDloYdy1WjvxsXI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>lMkFxtswygb1Nejgli7FZK6frmLrV+yi9HZXLGFgPzS/nHZNvnwlpA1/nEhQ4P2kRabgh/lJuOqcYYVBIadql2pAtAPAsXHa2Znwp8kv+tQAIFc8cpKaETXhs9Nu9koLFNsGJKpEDe+jZscb0f3lg752Hd6ciDyC/7Vz0VEgiIk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQaFSrk14OX7pLDHvlRhoGPTANBgkqhkiG9w0BAQUFADAzMTEwLwYDVQQDHigAVgBDAE0AUABBAFIAVABOAEUAUgBTAFwAYQBrAGUAdABoAGEAbgBpMB4XDTE2MDUwNDA3MDg0MFoXDTE3MDUwNDEzMDg0MFowMzExMC8GA1UEAx4oAFYAQwBNAFAAQQBSAFQATgBFAFIAUwBcAGEAawBlAHQAaABhAG4AaTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAlMkFxtswygb1Nejgli7FZK6frmLrV+yi9HZXLGFgPzS/nHZNvnwlpA1/nEhQ4P2kRabgh/lJuOqcYYVBIadql2pAtAPAsXHa2Znwp8kv+tQAIFc8cpKaETXhs9Nu9koLFNsGJKpEDe+jZscb0f3lg752Hd6ciDyC/7Vz0VEgiIkCAwEAATANBgkqhkiG9w0BAQUFAAOBgQBgcS+gM8H5sI/87LgwV9rbNdDjwyKipycp2D1oR9VyKKgParyhTyBRAgebAKQq/TPibcNPxo/s1lBOYw5QmiF8jGHB8W93vxTgYdNK9DUKeWka7tOAjwvMFdxTcX1wr/87t+DwZOr2lZ5JLPWbFvm5WSO+ofcU8ORfPC4s0wNVcw==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

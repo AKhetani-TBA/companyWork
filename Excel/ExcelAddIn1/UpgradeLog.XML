@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ExcelAddIn1">
+</Property><Property Name="Solution File" Value="D:\Programs\Excel\ExcelAddIn1\ExcelAddIn1.sln">
+</Property><Property Name="User Options File" Value="D:\Programs\Excel\ExcelAddIn1\ExcelAddIn1.suo">
+</Property><Property Name="Date" Value="Monday, May 02, 2016">
+</Property><Property Name="Time" Value="9:51">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ExcelAddIn1.sln" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ExcelAddIn1.suo" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1.suo">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ExcelAddIn1.csproj" Description="Project file successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\ExcelAddIn1.csproj">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ExcelAddIn1.csproj.user" Description="Project user file successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\ExcelAddIn1.csproj.user">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\LoginForm.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\LoginForm.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\LoginForm.Designer.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\LoginForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\NotificationWindow.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\NotificationWindow.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Properties\Resources.Designer.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Properties\Settings.Designer.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Ribbon1.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Ribbon1.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Ribbon1.Designer.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Ribbon1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ThisAddIn.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\ThisAddIn.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ThisAddIn.Designer.cs" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\ThisAddIn.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ExcelAddIn1_TemporaryKey.pfx" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\ExcelAddIn1_TemporaryKey.pfx">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Properties\Settings.settings" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ThisAddIn.Designer.xml" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\ThisAddIn.Designer.xml">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Resources\NotificationWindow.dll" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Resources\NotificationWindow.dll">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Resources\157_GetPermission_48x48_72.png" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Resources\157_GetPermission_48x48_72.png">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\LoginForm.resx" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\LoginForm.resx">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Properties\Resources.resx" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\Ribbon1.resx" Description="File successfully backed up as D:\Programs\Excel\ExcelAddIn1\Backup\ExcelAddIn1\Ribbon1.resx">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ExcelAddIn1.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ExcelAddIn1" Source="ExcelAddIn1\ExcelAddIn1.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExcelAddIn1.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="ExcelAddIn1.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ExcelAddIn1" Source="ExcelAddIn1\ExcelAddIn1.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
