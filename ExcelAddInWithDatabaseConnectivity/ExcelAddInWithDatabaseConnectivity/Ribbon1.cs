@@ -45,10 +45,15 @@ namespace ExcelAddInWithDatabaseConnectivity
             GetCellContextMenu().Reset(); // reset the cell context menu back to the default
             Range selection = (Range)Globals.ThisAddIn.Application.Selection;
             ListCount.Clear();
-            foreach (object cell in selection.Rows)
+            foreach (object cell in selection.Cells)
             {
                 try
                 {
+                    object rangeObject = workSheet.Cells[row, column];
+                    Range range = (Range)rangeObject;
+                    object rangeValue = range.Value2;
+                    string cellValue = rangeValue.ToString();
+
                     ListCount.Add(Int32.Parse(((Microsoft.Office.Interop.Excel.Range)cell).Value2.ToString()));
                 }
                 catch
