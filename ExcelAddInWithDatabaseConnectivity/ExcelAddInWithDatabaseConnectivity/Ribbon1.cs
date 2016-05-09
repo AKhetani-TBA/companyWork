@@ -49,11 +49,6 @@ namespace ExcelAddInWithDatabaseConnectivity
             {
                 try
                 {
-                    object rangeObject = workSheet.Cells[row, column];
-                    Range range = (Range)rangeObject;
-                    object rangeValue = range.Value2;
-                    string cellValue = rangeValue.ToString();
-
                     ListCount.Add(Int32.Parse(((Microsoft.Office.Interop.Excel.Range)cell).Value2.ToString()));
                 }
                 catch
