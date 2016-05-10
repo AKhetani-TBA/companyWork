@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
-using System.Xml;
-using System.Xml.Serialization;
 using Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Tools.Ribbon;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -79,11 +76,12 @@ namespace ExcelAddInWithDatabaseConnectivity
 
                 }
             }
+            int iListIndexValue = list[0].Item2;
 
-            if (list.Count > 1)
+            if (iListIndexValue != null)
             {
                 AddExampleMenuItem();
-            }
+            }            
         }
 
         private void AddExampleMenuItem()
@@ -98,20 +96,20 @@ namespace ExcelAddInWithDatabaseConnectivity
 
         private void ExampleMenuItemClick(Microsoft.Office.Core.CommandBarButton Ctrl, ref bool CancelDefault)
         {
-            
+
             int counterIndex = 0;
 
             //  *****          Call a Window Form for Single Row Data              ***** 
 
             list.ForEach(o =>
             {
-                strList =string.Empty;
+                strList = string.Empty;
                 if (counterIndex != o.Item1)
                 {
                     list.ForEach(p =>
                     {
                         if (p.Item1 == o.Item1)
-                        {   
+                        {
                             strList += strList == "" ? Convert.ToString(p.Item2) : "," + Convert.ToString(p.Item2);
                         }
                     });
@@ -139,13 +137,13 @@ namespace ExcelAddInWithDatabaseConnectivity
                         LatestY = browser.Location.Y;
                         top = 0; left = 0;
                         height = 146; width = 825;
-                       
+
                     }
                     browser.Show();
                     counterIndex = o.Item1;
                 }
             });
-            
+
         }
 
     }
