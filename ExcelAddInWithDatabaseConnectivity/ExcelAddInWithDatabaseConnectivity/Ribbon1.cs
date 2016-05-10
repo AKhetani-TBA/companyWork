@@ -71,9 +71,9 @@ namespace ExcelAddInWithDatabaseConnectivity
 
                     list.Add(new Tuple<int, int>(iRowNo, iRowValue));
                 }
-                catch
+                catch(Exception e)
                 {
-
+                    MessageBox.Show("Error :" + e); 
                 }
             }
             int iListIndexValue = list[0].Item2;
