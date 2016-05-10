@@ -18,11 +18,14 @@ namespace ExcelAddInWithDatabaseConnectivity
 
         Excel.Worksheet workSheet;
 
+        //  *****          Variables for set Dialog location              ***** 
+
         public static System.Drawing.Size ss = Screen.PrimaryScreen.WorkingArea.Size;
         public static int LatestX = 0, LatestY = 0;
         public static int top = 0, left = 0;
         public static int height = 146, width = 825;
-        //       List<int> list = new List <int>();
+
+        //  *****                List for save Excel Data                      ***** 
 
         List<Tuple<int, int>> list = new List<Tuple<int, int>>();
         public string strList;
@@ -30,11 +33,14 @@ namespace ExcelAddInWithDatabaseConnectivity
 
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
+
             GetCellContextMenu().Reset(); // reset the cell context menu back to the default
 
             Globals.ThisAddIn.Application.SheetBeforeRightClick += new Excel.AppEvents_SheetBeforeRightClickEventHandler(Application_SheetBeforeRightClick);
 
             workSheet = Globals.ThisAddIn.Application.ActiveWorkbook.Worksheets.Add();
+
+            //  *****          Set Default Location of Window Form              ***** 
 
             WindowWebBrowser webBrowser = new WindowWebBrowser();
             LatestX = webBrowser.Location.X;
@@ -92,19 +98,12 @@ namespace ExcelAddInWithDatabaseConnectivity
 
         private void ExampleMenuItemClick(Microsoft.Office.Core.CommandBarButton Ctrl, ref bool CancelDefault)
         {
-            //Excel.Range last = workSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell, Type.Missing);
-
-            //StringWriter stringWriter = new StringWriter();
-            //XmlSerializer serializer = new XmlSerializer(typeof(List<Tuple<int, int>>));
-            //XmlTextWriter xmlWriter = new XmlTextWriter(stringWriter);
-
-
-            //serializer.Serialize(xmlWriter, list);
-
-
-            //string xmlResult = stringWriter.ToString();
+            
             int counterIndex = 0;
-        list.ForEach(o =>
+
+            //  *****          Call a Window Form for Single Row Data              ***** 
+
+            list.ForEach(o =>
             {
                 strList =string.Empty;
                 if (counterIndex != o.Item1)
@@ -118,6 +117,8 @@ namespace ExcelAddInWithDatabaseConnectivity
                     });
 
                     WindowWebBrowser browser = new WindowWebBrowser(strList);
+
+                    //  *****          Call Window Form with set Different Location according to the Screen Location              ***** 
 
                     if (LatestX < ss.Width)
                     {
