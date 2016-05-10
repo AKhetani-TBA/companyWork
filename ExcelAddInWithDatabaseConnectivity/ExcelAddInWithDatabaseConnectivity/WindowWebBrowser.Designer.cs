@@ -37,7 +37,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(854, 370);
+            this.webBrowser1.Size = new System.Drawing.Size(805, 104);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
@@ -45,9 +45,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 370);
+            this.ClientSize = new System.Drawing.Size(805, 104);
             this.Controls.Add(this.webBrowser1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "WindowWebBrowser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "WindowWebBrowser";
             this.Load += new System.EventHandler(this.WindowWebBrowser_Load);
             this.ResumeLayout(false);

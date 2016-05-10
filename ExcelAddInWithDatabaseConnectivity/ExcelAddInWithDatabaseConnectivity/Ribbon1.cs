@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.Office.Interop.Excel;
@@ -8,23 +9,36 @@ using Microsoft.Office.Tools.Ribbon;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 
-
 namespace ExcelAddInWithDatabaseConnectivity
 {
+
+
     public partial class Ribbon1
     {
-        Excel.Worksheet workSheet;
-        List<int> ListCount = new List<int>();
 
-       
+        Excel.Worksheet workSheet;
+
+        public static System.Drawing.Size ss = Screen.PrimaryScreen.WorkingArea.Size;
+        public static int LatestX = 0, LatestY = 0;
+        public static int top = 0, left = 0;
+        public static int height = 146, width = 825;
+        //       List<int> list = new List <int>();
+
+        List<Tuple<int, int>> list = new List<Tuple<int, int>>();
+        public string strList;
+
+
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
         {
             GetCellContextMenu().Reset(); // reset the cell context menu back to the default
 
             Globals.ThisAddIn.Application.SheetBeforeRightClick += new Excel.AppEvents_SheetBeforeRightClickEventHandler(Application_SheetBeforeRightClick);
- 
-             workSheet = Globals.ThisAddIn.Application.ActiveWorkbook.Worksheets.Add();
-           
+
+            workSheet = Globals.ThisAddIn.Application.ActiveWorkbook.Worksheets.Add();
+
+            WindowWebBrowser webBrowser = new WindowWebBrowser();
+            LatestX = webBrowser.Location.X;
+            LatestY = webBrowser.Location.Y;
         }
 
         private void btn_Login_Click(object sender, RibbonControlEventArgs e)
@@ -38,18 +52,21 @@ namespace ExcelAddInWithDatabaseConnectivity
             return Globals.ThisAddIn.Application.CommandBars["Cell"];
         }
 
-        
+
         private void Application_SheetBeforeRightClick(object Sh, Range Target, ref bool Cancel)
         {
             int i = 0;
             GetCellContextMenu().Reset(); // reset the cell context menu back to the default
             Range selection = (Range)Globals.ThisAddIn.Application.Selection;
-            ListCount.Clear();
-            foreach (object cell in selection.Cells)
+            list.Clear();
+            foreach (Range cell in selection.Cells)
             {
                 try
                 {
-                    ListCount.Add(Int32.Parse(((Microsoft.Office.Interop.Excel.Range)cell).Value2.ToString()));
+                    int iRowNo = cell.Row;
+                    int iRowValue = int.Parse(Convert.ToString(cell.Value) == null ? 0 : Convert.ToString(cell.Value));
+
+                    list.Add(new Tuple<int, int>(iRowNo, iRowValue));
                 }
                 catch
                 {
@@ -57,7 +74,7 @@ namespace ExcelAddInWithDatabaseConnectivity
                 }
             }
 
-            if (ListCount.Count > 1)
+            if (list.Count > 1)
             {
                 AddExampleMenuItem();
             }
@@ -75,28 +92,61 @@ namespace ExcelAddInWithDatabaseConnectivity
 
         private void ExampleMenuItemClick(Microsoft.Office.Core.CommandBarButton Ctrl, ref bool CancelDefault)
         {
-            Excel.Range last = workSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell, Type.Missing);
-           
-            int summation = 0;
-            for (int jcount = 0; jcount < ListCount.Count; jcount++)
+            //Excel.Range last = workSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell, Type.Missing);
+
+            //StringWriter stringWriter = new StringWriter();
+            //XmlSerializer serializer = new XmlSerializer(typeof(List<Tuple<int, int>>));
+            //XmlTextWriter xmlWriter = new XmlTextWriter(stringWriter);
+
+
+            //serializer.Serialize(xmlWriter, list);
+
+
+            //string xmlResult = stringWriter.ToString();
+            int counterIndex = 0;
+        list.ForEach(o =>
             {
-                summation += ListCount[jcount];
-            }
+                strList =string.Empty;
+                if (counterIndex != o.Item1)
+                {
+                    list.ForEach(p =>
+                    {
+                        if (p.Item1 == o.Item1)
+                        {   
+                            strList += strList == "" ? Convert.ToString(p.Item2) : "," + Convert.ToString(p.Item2);
+                        }
+                    });
 
-            StringWriter stringWriter = new StringWriter();
-            XmlSerializer serializer = new XmlSerializer(typeof(List<int>));
-            XmlTextWriter xmlWriter = new XmlTextWriter(stringWriter);
+                    WindowWebBrowser browser = new WindowWebBrowser(strList);
 
-           
-            serializer.Serialize(xmlWriter, ListCount);
+                    if (LatestX < ss.Width)
+                    {
+                        browser.Location = new System.Drawing.Point(LatestX, LatestY);
+                        LatestX = browser.Location.X + width;
+                    }
+                    else
+                    {
+                        LatestY = browser.Location.Y + height + LatestY;
+                        LatestX = browser.Location.X + width;
+
+                        browser.Location = new System.Drawing.Point(0, LatestY);
+                    }
+                    if (LatestY + height > ss.Height)
+                    {
+                        browser.Location = new System.Drawing.Point(0, 0);
+                        LatestX = browser.Location.X;
+                        LatestY = browser.Location.Y;
+                        top = 0; left = 0;
+                        height = 146; width = 825;
+                       
+                    }
+                    browser.Show();
+                    counterIndex = o.Item1;
+                }
+            });
             
-
-            string xmlResult = stringWriter.ToString();
-
-
-            WindowWebBrowser browser = new WindowWebBrowser(xmlResult);
-            browser.Show();
         }
 
     }
+
 }

@@ -13,34 +13,39 @@ namespace ExcelAddInWithDatabaseConnectivity
 {
     public partial class WindowWebBrowser : Form
     {
-        public string xmlString;
+        public string DataString;
         public WindowWebBrowser()
         {
             InitializeComponent();
         }
 
-        public WindowWebBrowser(string xmlComingString)
+        public WindowWebBrowser(string DataComingString)
         {
             InitializeComponent();
-            xmlString = xmlComingString;
+            DataString = DataComingString;
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            
-           XmlDocument xmlDoc = new XmlDocument();
-           xmlDoc.LoadXml(xmlString);
-         
-           XmlNodeList elemList = xmlDoc.GetElementsByTagName("int");
-           
-           var target = webBrowser1.Document.GetElementById("demo");
-           target.InnerHtml = "";
 
-           for (int i = 0; i < elemList.Count; i++)
-           {   
-               var attrVal = elemList[i].InnerText;
-               target.InnerHtml += " <input type='text' id= 'txt" + i + "' value='" + attrVal.ToString() + "'  disabled>";
-           }
+            //XmlDocument xmlDoc = new XmlDocument();
+            //xmlDoc.LoadXml(xmlString);
+
+            //XmlNodeList elemList = xmlDoc.GetElementsByTagName("int");
+
+            char[] delimiterChars = { ',' };
+
+            string[] UserPermission = DataString.Split(delimiterChars);
+            int icount = 1;
+            var target = webBrowser1.Document.GetElementById("demo");
+            target.InnerHtml = "";
+            foreach (string token in UserPermission)
+            {
+               
+                target.InnerHtml += " <input type='text' id= 'txt" + icount + "' value='" + token.ToString() + "'  disabled>";
+
+                icount++;
+            }
         }
 
         private void WindowWebBrowser_Load(object sender, EventArgs e)
