@@ -1,0 +1,372 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <style>
+        body, select, table, td, input {
+            font-family: Calibri, Verdana !important;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #6E6E6E;
+            color: White;
+        }
+
+        table {
+            border-radius: 6px;
+            border: 1px solid;
+            width: 100%;
+        }
+
+        input:disabled {
+            background: #F2F2F2;
+        }
+
+        .inputWidth {
+            width: 80px;
+        }
+
+        .backred {
+            background-color: red;
+        }
+
+        .inputHidden {
+            display: none;
+        }
+
+        .errbox {
+            border: 1px solid #f00;
+            background-color: #fef1ec;
+            z-index: 1000;
+            left: 15px;
+            position: absolute;
+            margin-top: -3px;
+        }
+    </style>
+    <title></title>
+    <script src="https://www.thebeastapps.com/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="https://www.thebeastapps.com/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var table, xmlEle, Action, ID, Row, Qty, Price, CreateXml, OrderType, IsBind, UserId, OrderI, MinQ, IncrQ, LvQ;
+        var Republishcount = 0, accountliststr = "";
+        var incrementId = 0;
+        function LoadXml() {
+            try {
+
+                // var xmlEle = '<?xml version="1.0" encoding="utf-8"?><ExcelInfo><Action>SubmitOrder</Action><Rebind>0</Rebind><CUSIP><C A="BUY" P="12" O="3593" U="nverma@thebeastapps.com" ID="00101JAE6" R="-1" Q="34" /><C A="BUY" P="12" O="" U="nverma@thebeastapps.com" ID="00101JAF3" R="-1" Q="23" /></CUSIP></ExcelInfo>';
+                //  var items = " var items = 
+                xmlEle = $("#HdnOrderXml").val();
+                xmlEle = $.parseXML(xmlEle);
+                IsBind = $(xmlEle).find("Rebind").text();
+                OrderType = $(xmlEle).find("Action").text();
+                $("#AccountTblID").hide();
+                $('#ExecType').hide();
+                if (OrderType == "CancelOrder") {
+                    $('#dvSubmitOrder').append("<table><tr><th>OrderID</th><th>Action</th><th>Cusips</th><th>Qty</th><th>Price</th></tr></table>");
+                }
+                else {
+                    $("#ulsctaccount").html($("#HdGetAccounts").val());
+                    $('#dvSubmitOrder').append("<table><tr><th>Action</th><th>Cusips</th><th>Qty</th><th>Price</th><th>Exec Type</th></tr></table>");
+                }
+                table = $('#dvSubmitOrder').children();
+                $(xmlEle).find("C").each(function () {
+                    Action = $(this).attr("A");
+                    ID = $(this).attr("ID");
+                    Row = $(this).attr("R");
+                    Qty = $(this).attr("Q");
+                    Price = $(this).attr("P");
+                    UserId = $(this).attr("U");
+                    OrderID = $(this).attr("O");
+                    MinQ = $(this).attr("E");
+                    IncrQ = $(this).attr("F");
+                    LvQ = $(this).attr("G");
+                    if (OrderType == "CancelOrder") {
+                        table.append('<tr class="Rows"><td> <input class="Order inputWidth" disabled="disabled" value="' + OrderID + '" /></td><td> <input class="Action inputWidth" disabled="disabled" value="' + Action + '" /><input class="Row inputHidden" type="hidden"  value="' + Row + '" /></td><td><input class="Cusip inputWidth" disabled="disabled" value="' + ID + '" /></td><td><input class="Qty inputWidth" disabled="disabled" MaxLength="9"  value="' + Qty + '" /></td><td><input  class="Price inputWidth"  disabled="disabled" MaxLength="9" value="' + Price + '" /></td></tr>');
+                    }
+                    else {
+                        if (OrderID == "") {
+                            Republishcount++;
+                        }
+                        var inputQty = "q_" + incrementId;
+                        var inputPrice = "p_" + incrementId;
+                        var inputMinQ = "e_" + incrementId;
+                        var inputIncrQ = "f_" + incrementId;
+                        var inputLvQ = "g_" + incrementId;
+                        table.append('<tr onmouseover="onmousentered(this)" onmouseout="onmouseleft(this)" id="tr' + incrementId + '"  class="Rows"><td><input class="Action inputWidth" disabled="disabled" value="' + Action + '" /><input id="' + inputMinQ + '" class="MinQ inputHidden" type="hidden"  value="' + MinQ + '" /><input id="' + inputIncrQ + '" class="IncrQ inputHidden" type="hidden"  value="' + IncrQ + '" /><input id="' + inputLvQ + '" class="LvQ inputHidden" type="hidden"  value="' + LvQ + '" /><input class="Order inputHidden" type="hidden"  value="' + OrderID + '" /></td><input class="Row inputHidden" type="hidden"  value="' + Row + '" /></td><td><input class="Cusip inputWidth" disabled="disabled" value="' + ID + '" /></td><td><input class="Qty inputWidth" MaxLength="9" id="' + inputQty + '" onblur="return onQtyChange(this);" onkeyup="return onQtyChange(this);" onkeypress="return isNumberKeyWithoutDot(event)"  value="' + Qty + '" /></td><td><input  class="Price inputWidth" MaxLength="9" id="' + inputPrice + '" onblur="return onPriceChange(this);" onkeyup="return onPriceChange(this);" onkeypress="return isNumberKey(event)" value="' + Price + '" /></td><td><select id="' + incrementId + '_ExecType">' + document.getElementById('HdExecType').value + '</select></td><td id="td_' + incrementId + '" style="display:none;" ><div class="errbox" id="d_' + incrementId + '" style="display:none;width:150px;padding:3px;font-size:12px;font-family:Calibri;" ></div><img   src="http://demo.thebeastapps.com/SubmitOrderTradeWeb/warning1.png" alt="" width="15px" height="15px"   /></td></tr>');
+
+                        incrementId++;
+                    }
+
+
+                });
+                incrementId = 0;
+                if (Republishcount > 0) {
+                    $("#AccountTblID").show();
+                }
+                $(xmlEle).find("C").each(function () {
+                    var exceTypeElement = document.getElementById(incrementId + '_ExecType');
+                    if (exceTypeElement != null) {
+                        excTypes = $(this).attr("ET");
+                        if (exceTypeElement.length > 1) {
+                            exceTypeElement.selectedIndex = (excTypes == "1") ? 0 : 1;
+                        } else {
+                            exceTypeElement.selectedIndex = 0;
+                        }
+                        incrementId++;
+                    }
+                });
+                if (incrementId == 0) {
+                    $("#chkAllExecTypes").hide();
+                }
+                if (Republishcount == 0 && incrementId == 0) {
+                    $("#dvAccounts").hide();
+                }
+                //Hide Set All Type as Firm CheckBox..
+                var exceTypeElement = document.getElementById('0_ExecType');
+                if (exceTypeElement != null) {
+                    if (exceTypeElement.length == 1) {
+                        $("#chkAllExecTypes").hide();
+                    }
+                }
+            }
+            catch (e) {
+                alert(e.Message);
+            }
+        }
+
+        document.onkeydown = fkey;
+        document.onkeypress = fkey
+        document.onkeyup = fkey;
+
+
+
+        function fkey(e) {
+            var e = e || window.event;
+            if (e.keyCode == 116) {
+                e.returnValue = false;
+                event.keyCode = 0;
+                return false;
+
+            }
+        }
+
+        function GetXml() {
+            try {
+                var rowno = 0;
+                CreateXml = "<?xml version='1.0' encoding='utf-8'?><ExcelInfo><Action>" + OrderType + "</Action><Rebind>" + IsBind + "</Rebind><CUSIP>";
+                $(".Rows").each(function () {
+                    Action = $(this).find('.Action').val();
+                    Cusip = $(this).find('.Cusip').val();
+                    Qty = $(this).find('.Qty').val();
+                    Row = $(this).find('.Row').val();
+                    Price = $(this).find('.Price').val();
+                    OrderID = $(this).find('.Order').val();
+                    MinQ = $(this).find('.MinQ').val();
+                    IncrQ = $(this).find('.IncrQ').val();
+                    LvQ = $(this).find('.LvQ').val();
+                    var execType = (parseInt($('#' + rowno + '_ExecType option:selected').val()) + 1).toString();
+                    if (OrderType == "CancelOrder") {
+                        Child = "<C  O='" + OrderID + "'  U='" + UserId + "'/>";
+                    }
+                    else {
+
+                        if (OrderID != "") {
+
+                            Child = "<C  O='" + OrderID + "' Q='" + Qty + "' P='" + Price + "'  MinQ='" + MinQ + "' IncrQ='" + IncrQ + "' LvQ='" + LvQ + "' ET='" + execType + "'/>";
+                        }
+                        else {
+                            var accounts = $("#ulsctaccount option:selected").text()
+                            accountliststr = accounts;
+                            Child = "<C A='" + Action + "' ID='" + Cusip + "' R='" + Row + "' Q='" + Qty + "' P='" + Price + "' Acc='" + accounts + "'  U='" + UserId + "' MinQ='" + MinQ + "' IncrQ='" + IncrQ + "' LvQ='" + LvQ + "' ET='" + execType + "' />";
+                        }
+                    }
+                    $("#HdGetAccounts").val(accountliststr);
+                    CreateXml += Child;
+                    rowno++;
+                });
+                CreateXml += "</CUSIP></ExcelInfo>";
+                $("#HdnGetOrderxml").val(CreateXml);
+            }
+            catch (e) {
+                alert(e.Message);
+            }
+        }
+
+        //**************************** TextBox Validation******************************
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function isNumberKeyWithoutDot(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57 || charCode == 46)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function onmousentered(obj) {
+            try {
+                var message = "";
+                var messagetdvisible = $("#" + obj.id.replace("tr", "td_")).is(':visible');
+                if (messagetdvisible) {
+                    var isDisplayed = false;
+                    var changeval = parseInt($("#" + obj.id.replace("tr", "q_")).val());
+                    if (isNaN(changeval) || changeval == 0 || changeval == "") {
+                        message = "Enter quantity.";
+                        $("#" + obj.id.replace("tr", "d_")).html(message);
+                        isDisplayed = true;
+                        $("#" + obj.id.replace("tr", "d_")).show();
+                    }
+                    if (parseInt(changeval, 8) > parseInt($("#HdMaxBidSize").val())) {
+                        message = "You are not allowed to publish offers more than \n" + (parseInt($("#HdMaxBidSize").val())/1000).toString() + "MM.";
+                        $("#" + obj.id.replace("tr", "d_")).html(message);
+                        isDisplayed = true;
+                        $("#" + obj.id.replace("tr", "d_")).show();
+                    }
+                    var changeprice = parseInt($("#" + obj.id.replace("tr", "p_")).val());
+                    if (isNaN(changeprice) || changeprice == 0 || changeprice == "") {
+                        message = "Enter price.";
+                        $("#" + obj.id.replace("tr", "d_")).html(message);
+                        isDisplayed = true;
+                        $("#" + obj.id.replace("tr", "d_")).show();
+                    }
+                }
+            }
+            catch (e) {
+                alert("onmousentered-" + e.Message);
+            }
+        }
+
+        function onmouseleft(obj) {
+            $("#" + obj.id.replace("tr", "d_")).hide();
+        }
+
+        function onQtyChange(changeval) {
+            try {
+                changeval.parentNode.className = "inputWidth";
+                var qtyId = changeval.id;
+                var messagetd = document.getElementById('td_' + qtyId.replace("q_", ""));
+
+                if (isNaN(changeval.value) || changeval.value == 0 || changeval.value == "") {
+                    changeval.parentNode.className = "inputWidth backred";
+                    messagetd.style.display = 'block';
+                    return false;
+                }
+                else if (parseInt(changeval.value, 8) > parseInt($("#HdMaxBidSize").val())) {
+                    changeval.parentNode.className = "inputWidth backred";
+                    messagetd.style.display = 'block';
+                    return false;
+                }
+                else {
+                    messagetd.style.display = 'none';
+                    return true;
+                }
+            }
+            catch (e) {
+                alert("QtyChange-" + e.Message);
+            }
+        }
+
+        function onPriceChange(changeval) {
+            try {
+                changeval.parentNode.className = "inputWidth";
+                var qtyId = changeval.id;
+                var messagetd = document.getElementById('td_' + qtyId.replace("p_", ""));
+                if (isNaN(changeval.value) || changeval.value == 0 || changeval.value == "") {
+                    changeval.parentNode.className = "inputWidth backred";
+                    messagetd.style.display = 'block';
+                    return false;
+                }
+                else {
+                    messagetd.style.display = 'none';
+                    return true;
+                }
+            }
+            catch (e) {
+                alert("PriceChange-" + e.Message);
+            }
+        }
+
+        function CheckForExectype() {
+            try {
+                var increment = 0;
+                table = $('#dvSubmitOrder').children();
+                $(xmlEle).find("C").each(function () {
+
+                    if (document.getElementById("checkExecType").checked == true) {
+                        //if (document.getElementById('' + increment + '_ExecType').sizeze() > 0)
+                        //    {
+                        if (document.getElementById(increment + '_ExecType').length > 1) {
+                            document.getElementById('' + increment + '_ExecType').selectedIndex = 1;
+                        }
+                        //}
+                        //$('#' + increment + '_ExecType').val($("'" + increment + "_ExecType option:second'").val());
+                    } else {
+                        document.getElementById('' + increment + '_ExecType').selectedIndex = 0;
+                    }
+                    increment++;
+                });
+            } catch (e) {
+                alert("Exec Type Change -" + e.Message);
+            }
+        }       
+    </script>
+</head>
+<body>
+    <div id="dvAccounts">
+        <table width="100%">
+            <tr>
+                <td style="width: 50%">
+                    <table id="AccountTblID">
+                        <tr>
+                            <td >Account:</td>
+                            <td >
+                                <select style="width: 195px" id="ulsctaccount"></select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="text-align: right;width:50%">
+                    <table  id="chkAllExecTypes" style="width: 100%; border: none">
+                        <tr>
+                            <td style="text-align: right;">
+                                <label style="float: right; width: 90px" for="checkExecType" id="lblForCheckBox1">Set All Firm</label>
+                            </td>
+                            <td style="max-width: 10px;">
+                                <input style="float: right" type="checkbox" id="checkExecType" name="Set Firm" onclick="CheckForExectype()" /></td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="dvSubmitOrder">
+    </div>
+    <input type="hidden" id="HdnGetOrderxml" runat="server" />
+    <input type="hidden" id="HdGetAccounts" />
+    <input type="hidden" id="HdExecType" />
+    <input type="hidden" id="HdnOrderXml" />
+    <input type="hidden" id="HdMaxBidSize" />
+    <!-- <input type="button" id="btnSubmitOrder" value="Submit Order" onclick="GetXml();" />-->
+    <script type="text/javascript">        
+        $(document).ready(function () {
+            $("#dvSubmitOrder").bind('copy', function () {
+                return false;
+            });
+            $("#dvSubmitOrder").bind('paste', function () {
+                return false;
+            });
+            $("#dvSubmitOrder").bind('cut', function () {
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheBeastAppsAddin</name>
+    </assembly>
+    <members>
+        <member name="F:ExcelAddIn5.BeastExcel.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.BeastExcel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.BeastExcel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ChangePassword.ComparePassword">
+            <summary>
+            Compare New Password and Confirm Password text.
+            </summary>
+            <returns>True, if both are matching. Else, false.</returns>
+        </member>
+        <member name="F:ExcelAddIn5.ChangePassword.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ChangePassword.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.ChangePassword.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ExcelAddIn5.ConnectionInfo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ConnectionInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.ConnectionInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ExcelAddIn5.ContactUs.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ContactUs.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.ContactUs.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.ExeChunk.productVersion">
+            <remarks/>
+        </member>
+        <member name="P:ExcelAddIn5.ExeChunk.NoOfChunks">
+            <remarks/>
+        </member>
+        <member name="P:ExcelAddIn5.ExeChunk.chunkName">
+            <remarks/>
+        </member>
+        <member name="P:ExcelAddIn5.ExeChunk.chunkData">
+            <remarks/>
+        </member>
+        <member name="M:ExcelAddIn5.FileUploadService.UploadFile(System.String,System.String,System.String)">
+            <summary>
+            Uploading the File to server
+            </summary>
+            <param name="url">Server url where file to be uploaded</param>
+            <param name="fileName">Name of Zipfile</param>
+            <param name="userName">Sender Name to Identify user</param>
+        </member>
+        <member name="M:ExcelAddIn5.Login.#ctor">
+            <summary>
+            Login.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Login.CallWithConstructer">
+            <summary>
+            callWithConstructer
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Login.CommonValidation">
+            <summary>
+            CommonValidation.
+            </summary>
+            <returns>bool value return true and false.</returns>
+        </member>
+        <member name="M:ExcelAddIn5.Login.LoginButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            LoginButton Click
+            </summary>
+            <param name="sender">Specifies object argument for the sender.</param>
+            <param name="e">Specifies events argument for the e.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Login.setControlState(System.Boolean)">
+            <summary>
+            setControlState.
+            </summary>
+            <param name="controlState">specifies bool argument for the Enabled.<B>True</B><B>False</B>.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Login.ResetPassAndSendMail(System.String)">
+            <summary>
+            ResetPassAndSendMail.
+            </summary>
+            <param name="emailTo">string argument for the strEmailTo.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Login.LnkForgetPwd_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
+            <summary>
+            LnkForgetPwd LinkClicked.
+            </summary>
+            <param name="sender">object argument for the sender.</param>
+            <param name="e">events argument for the e.</param>
+        </member>
+        <member name="F:ExcelAddIn5.Login.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Login.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Login.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ExcelAPIHandler.ValidateUser(System.String,System.String)">
+            <summary>
+            User Authentication Method 
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:ExcelAddIn5.ExcelAPIHandler.GetLatestVersionID(System.String,System.String)">
+            <summary>
+            GetLatestVersionID
+            </summary>
+            <param name="userName"></param>
+            <param name="excelObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelAddIn5.ExcelAPIHandler.GetObjectVersionMappings(System.String,System.Int32)">
+            <summary>
+            GetObjectVersionMappings
+            </summary>
+            <param name="excelObjectId"></param>
+            <param name="excelVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelAddIn5.ExcelAPIHandler.GetSetupOfLatestVersion(System.String)">
+            <summary>
+            GetSetupOfLatestVersion
+            </summary>
+            <param name="excelObjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelAddIn5.LoginHandler.UserLoginAPI(System.String,System.String)">
+            <summary>
+            User Authetication called from APIHandler
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.SendToEventLog(System.String,System.Diagnostics.EventLogEntryType)">
+            <summary>
+            If any error occured in this class than write entry into event viewer.
+            </summary>
+            <param name="msg">Message for event viewer</param>
+            <param name="logType">It should be Information, Error, FailureAudit,Warning and SuccessAudit</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.SendToEventLog(System.String,System.Diagnostics.EventLogEntryType,System.Exception)">
+            <summary>
+            If any error occured in this class than write entry into event viewer with additionally exception information.
+            </summary>
+            <param name="msg">Message for event viewer</param>
+            <param name="logType">It should be Information, Error, FailureAudit,Warning and SuccessAudit</param>
+            <param name="Ex">Exception Object</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Info(System.String,System.String,System.String)">
+            <summary>
+            This function is used to log your activity into configured Log4Net appender.
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Specific Message to log</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Error(System.String,System.String)">
+            <summary>
+            This function is used to log errors without exception object.
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="msg">Message Description</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Error(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            This function is used to log errors into configured Log4Net appender.
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Message Description</param>
+            <param name="exception">Exception</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Warn(System.String,System.String,System.String)">
+            <summary>
+            This function is used to log Warn into configured Log4Net appender.
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Message Description</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Warn(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            This function is used to log Warn with exception into configured Log4Net appender.
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Message Description</param>
+            <param name="exception">Exception</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Fatal(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            This function is used to log Fatal errors into configured Log4Net appender.
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Message Description</param>
+            <param name="exception">Exception</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Debug(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            This function is used to log Debug information with exception into configured Log4Net appender. To get the debug values change logger's level value to DEBUG or ALL in your web.config file otherwise it will ignor it and will not log values.
+            for example,
+            <logger name="VCMUdpAppender">
+            <level value="ALL"/>
+            <appender-ref ref="UdpAppender"/>
+            </logger>
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Message Description</param>
+            <param name="exception">Exception</param>
+        </member>
+        <member name="M:ExcelAddIn5.LogUtility.Debug(System.String,System.String,System.String)">
+            <summary>
+            This function is used to log Debug information into configured Log4Net appender.
+            To get the debug values change logger's level value to DEBUG or ALL in your web.config file otherwise it will ignor it and will not log values.
+            for example,
+            <logger name="VCMUdpAppender">
+            <level value="ALL"/>
+            <appender-ref ref="UdpAppender"/>
+            </logger>
+            </summary>
+            <param name="PageName">Page Name</param>
+            <param name="MethodName">Calling Method Name</param>
+            <param name="msg">Message Description</param>
+        </member>
+        <member name="F:ExcelAddIn5.ProgressDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ProgressDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.ProgressDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ExcelAddIn5.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.BeastIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.connection">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.Contact">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.EXCEL_APP_CURRENTVERSION">
+            <summary>
+              Looks up a localized string similar to 08.05.17.03.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.EXCEL_APP_OBJGUID">
+            <summary>
+              Looks up a localized string similar to 8850735f-77a6-4861-abb1-d0c07f0f9caf.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.img2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.red">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.SendLog">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.Settings">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.TheBeast">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.ViewLogs">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ExcelAddIn5.Properties.Resources.Warning">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:ExcelAddIn5.Beast.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Beast.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Beast.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ExcelAddIn5.ThisRibbonCollection">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+            
+        </member>
+        <member name="F:ExcelAddIn5.Settings.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Settings.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Settings.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ExcelAddIn5.Share.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Share.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ExcelAddIn5.Share.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.Utilities.GetCookies">
+            <summary>
+            Create cookie with necessary information to be used for Beast Excel communication.
+            </summary>
+            <returns>Cookie with necessary information.</returns>
+        </member>
+        <member name="M:ExcelAddIn5.Utilities.ConvertToSMD5(System.String)">
+            <summary>
+            Converting string to MD5 Format
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExcelAddIn5.ZipService.AddFile(System.Collections.Generic.List{System.String})">
+            <summary>
+            Adding the file to zipServicetype object
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ExcelAddIn5.ZipService.Save(System.String)">
+            <summary>
+            Creating the zip file at destination Folder
+            </summary>
+            <param name="destinationPath">Destination folder path</param>
+        </member>
+        <member name="M:ExcelAddIn5.ZipService.DeleteFile(System.String)">
+            <summary>
+            Deleting the ZipFile
+            </summary>
+            <param name="destinationPath">destination Path</param>
+        </member>
+        <member name="T:ExcelAddIn5.ThisAddIn">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.InternalStartup">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.#ctor(Microsoft.Office.Tools.Excel.ApplicationFactory,System.IServiceProvider)">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.Initialize">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.FinishInitialization">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.InitializeDataBindings">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.InitializeCachedData">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.InitializeData">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.BindToData">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.StartCaching(System.String)">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.StopCaching(System.String)">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.IsCached(System.String)">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.BeginInitialization">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.EndInitialization">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.InitializeControls">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.InitializeComponents">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.NeedsFill(System.String)">
+            
+        </member>
+        <member name="M:ExcelAddIn5.ThisAddIn.OnShutdown">
+            
+        </member>
+        <member name="T:ExcelAddIn5.Globals">
+            
+        </member>
+        <member name="M:ExcelAddIn5.Globals.#ctor">
+            
+        </member>
+    </members>
+</doc>

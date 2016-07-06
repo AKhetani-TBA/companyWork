@@ -1,0 +1,25 @@
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.pdb
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastCommunicationInterface.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\bin\Debug\Newtonsoft.Json.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.Properties.Resources.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.Share.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.csproj.GenerateResource.Cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.pdb
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.dll.config
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.pdb
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.dll.manifest
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\BeastShareAreaAddin.vsto
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.Properties.Resources.resources
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.Share.resources
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.pdb
+D:\Personal\Private Repository\ExcelAddIn\BeastShareAreaAddin\obj\Debug\BeastShareAreaAddin.csprojResolveAssemblyReference.cache

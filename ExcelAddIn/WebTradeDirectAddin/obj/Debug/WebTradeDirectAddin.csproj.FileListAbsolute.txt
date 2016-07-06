@@ -1,0 +1,37 @@
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.XML
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.pdb
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.BaseForm.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.CancelOrder.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.MyMarketCancelOrder.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.MyMarketSubmitOrder.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.Properties.Resources.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.SubmitOrder.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.TWDAddNewColumns.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.csproj.GenerateResource.Cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.pdb
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.dll.config
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.XML
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.dll
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.pdb
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.dll.manifest
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\WebTradeDirectAddin.vsto
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.Accept_Reject_Order.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.BaseForm.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.CancelOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.MyMarketCancelOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.MyMarketSubmitOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.Properties.Resources.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.SubmitOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.TWDAddNewColumns.resources
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.dll
+D:\Personal\Private Repository\ExcelAddIn\WebTradeDirectAddin\obj\Debug\WebTradeDirectAddin.pdb

@@ -1,0 +1,19 @@
+
+#include "ifx.h"
+
+export prototype BE_Is_Excel_Installed(HWND);
+
+
+function BE_Is_Excel_Installed(hMSI)
+	STRING szBeastKey;
+	NUMBER nRootKey;
+begin
+	nRootKey = HKEY_LOCAL_MACHINE;
+	RegDBSetDefaultRoot (nRootKey);
+
+	szBeastKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\excel.exe";
+	if (RegDBKeyExist(szBeastKey) < 0) then
+		MessageBoxEx("Could not find Microsoft Excel installed in this system. Please install Microsoft Excel to use this AddIn", "TheBeastApps-ExcelAddin", SEVERE);
+		abort;
+	endif;
+end;

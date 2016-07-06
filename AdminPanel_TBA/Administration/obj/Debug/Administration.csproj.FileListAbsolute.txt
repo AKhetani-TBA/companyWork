@@ -1,0 +1,108 @@
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\obj\Debug\Administration.csproj.App.config
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\obj\Debug\Administration.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\obj\Debug\Administration.Properties.Resources.resources
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\obj\Debug\Administration.csproj.GenerateResource.Cache
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Administration.dll.config
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Administration.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Administration.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\BASE.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\BLL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\DAL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Ionic.Zip.Reduced.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\log4net.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\MaxMind.Db.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\MaxMind.GeoIP.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\MaxMind.GeoIP2.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.ServiceBus.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\MySql.Data.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Newtonsoft.Json.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\RestSharp.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.IO.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.Extensions.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.Primitives.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.WebRequest.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Runtime.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Threading.Tasks.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\TBA.LogUtility.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\BASE.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\BLL.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\DAL.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\log4net.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\MaxMind.Db.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\MaxMind.GeoIP2.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.ServiceBus.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Newtonsoft.Json.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\RestSharp.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.IO.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.Extensions.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.Primitives.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Net.Http.WebRequest.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Runtime.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\System.Threading.Tasks.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\obj\Debug\Administration.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\obj\Debug\Administration.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\Administration\bin\Microsoft.Office.Tools.Excel.v4.0.Utilities.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\obj\Debug\Administration.csproj.App.config
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\obj\Debug\Administration.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\obj\Debug\Administration.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Administration.dll.config
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Administration.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Administration.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\BASE.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\BLL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\DAL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Ionic.Zip.Reduced.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\log4net.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\MaxMind.Db.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\MaxMind.GeoIP.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\MaxMind.GeoIP2.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.ServiceBus.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\MySql.Data.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Newtonsoft.Json.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\RestSharp.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.IO.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.Extensions.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.Primitives.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.WebRequest.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Runtime.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Threading.Tasks.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\TBA.LogUtility.dll
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\BASE.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\BLL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\DAL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\log4net.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\MaxMind.Db.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\MaxMind.GeoIP2.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.ServiceBus.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\Newtonsoft.Json.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\RestSharp.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.IO.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.Extensions.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.Primitives.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Net.Http.WebRequest.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Runtime.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\bin\System.Threading.Tasks.xml
+D:\Personal\Private Repository\AdminPanel_TBA\Administration\obj\Debug\Administration.pdb

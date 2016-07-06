@@ -1,0 +1,17 @@
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\Beast_RFQ_Addin.dll
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\Beast_RFQ_Addin.pdb
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\Beast_RFQ_Addin.dll.manifest
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\Beast_RFQ_Addin.vsto
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.BaseForm.resources
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.CancelOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.MyMarketCancelOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.MyMarketSubmitOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.Properties.Resources.resources
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.SubmitQuotes.resources
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.dll
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.pdb
+D:\Personal\Private Repository\ExcelAddIn\RFQAddin\obj\Debug\Beast_RFQ_Addin.csprojResolveAssemblyReference.cache

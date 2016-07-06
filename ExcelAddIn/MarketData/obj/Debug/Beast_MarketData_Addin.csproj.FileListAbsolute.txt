@@ -1,0 +1,13 @@
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Beast_MarketData_Addin.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Beast_MarketData_Addin.pdb
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Beast_MarketData_Addin.dll.manifest
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Beast_MarketData_Addin.vsto
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Microsoft.Practices.Prism.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Debug\Beast_ExcelRTDViewer_Addin.Properties.Resources.resources
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Debug\Beast_MarketData_Addin.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Debug\Beast_MarketData_Addin.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Debug\Beast_MarketData_Addin.pdb
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Debug\Beast_MarketData_Addin.csprojResolveAssemblyReference.cache

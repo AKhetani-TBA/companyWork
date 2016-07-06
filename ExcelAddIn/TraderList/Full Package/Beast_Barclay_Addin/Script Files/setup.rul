@@ -1,0 +1,265 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//  This template script provides the code necessary to build an entry-point 
+//  function to be called in an InstallScript custom action. 
+//                                                                            
+//                                                                            
+//    File Name:  Setup.rul                                                   
+//                                                                            
+//  Description:  InstallShield script                                        
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Include Ifx.h for built-in InstallScript function prototypes, for Windows 
+// Installer API function prototypes and constants, and to declare code for 
+// the OnBegin and OnEnd events.
+#include "ifx.h"
+#define PSAPI_FILE        "psapi.dll"  // Windows NT process DLL
+#define PROCESSID_LENGTH  4            // 4 bytes (DWORD) for a process ID
+#define PROCESS_QUERY_INFORMATION  0x400
+#define PROCESS_VM_READ            0x10
+
+// The keyword export identifies MyFunction() as an entry-point function.
+// The argument it accepts must be a handle to the Installer database.
+//export prototype MyFunction(HWND);
+
+// To Do:  Declare global variables, define constants, and prototype user-
+//         defined and DLL functions here.
+
+
+// To Do:  Create a custom action for this entry-point function:
+// 1.  Right-click on "Custom Actions" in the Sequences/Actions view.
+// 2.  Select "Custom Action Wizard" from the context menu.
+// 3.  Proceed through the wizard and give the custom action a unique name.
+// 4.  Select "Run InstallScript code" for the custom action type, and in
+//     the next panel select "MyFunction" (or the new name of the entry-
+//     point function) for the source.
+// 5.  Click Next, accepting the default selections until the wizard
+//     creates the custom action.
+//
+// Once you have made a custom action, you must execute it in your setup by
+// inserting it into a sequence or making it the result of a dialog's
+// control event.
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  MyFunction
+//                                                                           
+//  Purpose:  This function will be called by the script engine when
+//            Windows(TM) Installer executes your custom action (see the "To
+//            Do," above).
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+//function MyFunction(hMSI)
+    // To Do:  Declare local variables.
+//begin
+
+    // To Do:  Write script that will be executed when MyFunction is called.
+ 
+//end;
+export prototype CheckIfBeastExcelInstalled(HWND);
+export prototype CheckIfExcelInstalled(HWND);
+export prototype IsExcelRunning(HWND);
+prototype BOOL ProcessRunning(STRING);
+prototype POINTER ArrayToPointer(BYREF VARIANT);
+
+
+// Structure to mirror the C/C++ SAFEARRAY data structure.
+typedef _SAFEARRAY
+begin
+	SHORT   cDims;
+	SHORT   fFeatures;
+	LONG    cbElements;
+	LONG    cLocks;
+	POINTER pvData;
+	// rgsaBound omitted
+end;
+
+// Structure to mirror the C/C++ VARIANT data structure.
+typedef _VARIANT
+begin
+	SHORT  vt;
+	SHORT  wReserver1;
+	SHORT  wReserved2;
+	SHORT  wReserved3;
+	NUMBER nData;
+end;
+
+
+// Kernel functions.
+
+prototype NUMBER Kernel32.OpenProcess(NUMBER, BOOL, NUMBER);
+prototype NUMBER Kernel32.TerminateProcess(NUMBER, NUMBER);
+
+// Process information functions.
+
+prototype NUMBER PSAPI.EnumProcesses(POINTER, NUMBER, BYREF NUMBER);
+prototype NUMBER PSAPI.EnumProcessModules(NUMBER, BYREF NUMBER, NUMBER,
+		BYREF NUMBER);
+prototype NUMBER PSAPI.GetModuleFileNameExA(NUMBER, NUMBER, BYREF STRING,
+		NUMBER);
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  CheckIfExcelInstalled
+//                                                                           
+//  Purpose:  This function checks if Excel is installed or not on host system.
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+function CheckIfExcelInstalled(hMSI)
+	STRING szBeastKey;
+	NUMBER nRootKey;
+begin
+	nRootKey = HKEY_LOCAL_MACHINE;
+	RegDBSetDefaultRoot (nRootKey);
+
+	szBeastKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\excel.exe";
+	if (RegDBKeyExist(szBeastKey) < 0) then
+		MessageBoxEx("Could not find Microsoft Excel installed in this system. Please install Microsoft Excel to use this AddIn", "TheBeastApps-ExcelAddin", SEVERE);
+		abort;
+	endif;
+end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  CheckIfBeastExcelInstalled
+//                                                                           
+//  Purpose:  This function checks if BeastExcel plugin is successfult 
+//			  installed or not).
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+function CheckIfBeastExcelInstalled(hMSI)
+	STRING szBeastKey;
+	NUMBER nRootKey;
+begin
+	nRootKey = HKEY_CURRENT_USER;
+	RegDBSetDefaultRoot (nRootKey);
+
+	szBeastKey = "Software\\Microsoft\\Office\\Excel\\Addins\\TheBeastAppsAddin";
+	if (RegDBKeyExist(szBeastKey) < 0) then
+		abort;
+	endif;
+end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  CheckIfExcelRunning
+//                                                                           
+// Purpose:  This function checks if Excel instance is running.
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+
+function IsExcelRunning(nMSI)
+BOOL running ;
+STRING result;
+begin
+	running = ProcessRunning("Excel") ;
+	if (running == TRUE) then
+		MsiSetProperty (nMSI, "IS_EXCEL_RUNNING", 'TRUE');
+	else 
+		MsiSetProperty (nMSI, "IS_EXCEL_RUNNING", 'FALSE');
+	endif;
+end;
+
+function BOOL ProcessRunning(szAppName)
+	BOOL    bvRunning;          // Process is running
+	NUMBER  nvProcessIDs(512);  // Array of process IDs
+	NUMBER  nvBytesReturned;    // Number of bytes returned in process ID array
+	NUMBER  nvProcesses;        // Number of processes running
+	NUMBER  nvIndex;            // Loop index
+	NUMBER  nvProcessHandle;    // Handle to a process
+	NUMBER  nvModuleHandle;     // Handle to a process module
+	NUMBER  nvBytesRequired;    // Number of bytes required to store values
+	POINTER pvProcessIDs;       // Pointer to process ID array
+	STRING  svModuleName;       // Module name
+	STRING  svFileName;         // Module filename    
+	NUMBER  nInstance;			//Instance count
+begin
+	// The psapi.dll reads the Windows NT performance database. The DLL
+	// is part of the Win32 SDK.
+	
+	if UseDLL(WINSYSDIR ^ PSAPI_FILE) < 0 then
+		// Could not load psapi.dll.
+		
+		MessageBox("ERROR: Could not load [" + WINSYSDIR ^ PSAPI_FILE +
+				"].", SEVERE);
+		
+		return FALSE;
+	endif;
+    
+    // Get the PIDs of all currently running processes.
+    
+	pvProcessIDs = ArrayToPointer(nvProcessIDs);
+
+	EnumProcesses(pvProcessIDs, 512, nvBytesReturned);
+
+	// Determine the number of process IDs retrieved. Each process ID
+	// is PROCESSID_LENGTH bytes.
+	
+	nvProcesses = nvBytesReturned / PROCESSID_LENGTH;
+	
+	// Get the executable associated with each process, and check if
+	// its filename matches the one passed to the function.
+	nInstance =0; 
+	bvRunning = FALSE;
+	for nvIndex = 1 to nvProcesses
+		// Get a handle to the process.
+		
+		nvProcessHandle = OpenProcess(PROCESS_QUERY_INFORMATION |
+				PROCESS_VM_READ, 0, nvProcessIDs(nvIndex));
+				
+		if nvProcessHandle != 0 then
+			// Get a handle to the first module in the process, which
+			// should be the executable.
+			
+			if EnumProcessModules(nvProcessHandle, nvModuleHandle,		
+					PROCESSID_LENGTH, nvBytesRequired) != 0 then
+				// Get the path of the module.
+				
+				if GetModuleFileNameExA(nvProcessHandle, nvModuleHandle,
+						svModuleName, SizeOf(svModuleName)) != 0 then
+					// Extract the filename (without an extension) from
+					// the path.
+					
+					ParsePath(svFileName, svModuleName, FILENAME_ONLY);
+					
+					if StrCompare(svFileName, szAppName) = 0 then
+						// The process module matches the application 
+						// name passed to the function.
+						// nInstance = nInstance +1;  
+						bvRunning = TRUE;
+						return bvRunning; 
+							    
+					endif;
+				endif;
+			endif;
+		endif;
+	endfor;
+			
+	if UnUseDLL(PSAPI_FILE) < 0 then
+		MessageBox("ERROR: Could not unload [" + WINSYSDIR ^ PSAPI_FILE +
+				"].", SEVERE);
+				
+		return FALSE;
+	endif;
+		
+	return bvRunning;
+end;
+
+
+function POINTER ArrayToPointer(structArray)
+	_SAFEARRAY POINTER pstructArray;    // _SAFEARRAY array pointer
+	_VARIANT   POINTER pstructVariant;  // _VARIANT array pointer
+begin
+	// Typecast the pointer to the array to a _VARIANT pointer.
+	
+	pstructVariant = &structArray;
+	
+	// Extract the _SAFEARRAY pointer from the _VARIANT.
+	
+	pstructArray = pstructVariant->nData;
+	
+	// Return the pointer to the actual data from the _SAFEARRAY.
+	
+	return pstructArray->pvData;
+end;

@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebTradeDirectAddin</name>
+    </assembly>
+    <members>
+        <member name="F:WebTradeDirectAddin.BaseForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.BaseForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.BaseForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.CancelOrder.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.CancelOrder.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.CancelOrder.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHW_STOP">
+            <summary>
+            Stop flashing. The system restores the window to its original stae.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHW_CAPTION">
+            <summary>
+            Flash the window caption.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHW_TRAY">
+            <summary>
+            Flash the taskbar button.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHW_ALL">
+            <summary>
+            Flash both the window caption and taskbar button.
+            This is equivalent to setting the FLASHW_CAPTION | FLASHW_TRAY flags.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHW_TIMER">
+            <summary>
+            Flash continuously, until the FLASHW_STOP flag is set.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHW_TIMERNOFG">
+            <summary>
+            Flash continuously until the window comes to the foreground.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.FlashWindow.Flash(System.IntPtr)">
+            <summary>
+            Flash the spacified Window (Form) until it recieves focus.
+            </summary>
+            <param name="form">The Form (Window) to Flash.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebTradeDirectAddin.FlashWindow.Flash(System.Windows.Forms.Form,System.UInt32)">
+            <summary>
+            Flash the specified Window (form) for the specified number of times
+            </summary>
+            <param name="form">The Form (Window) to Flash.</param>
+            <param name="count">The number of times to Flash.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebTradeDirectAddin.FlashWindow.Start(System.Windows.Forms.Form)">
+            <summary>
+            Start Flashing the specified Window (form)
+            </summary>
+            <param name="form">The Form (Window) to Flash.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebTradeDirectAddin.FlashWindow.Stop(System.Windows.Forms.Form)">
+            <summary>
+            Stop Flashing the specified Window (form)
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WebTradeDirectAddin.FlashWindow.Win2000OrLater">
+            <summary>
+            A boolean value indicating whether the application is running on Windows 2000 or later.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHWINFO.cbSize">
+            <summary>
+            The size of the structure in bytes.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHWINFO.hwnd">
+            <summary>
+            A Handle to the Window to be Flashed. The window can be either opened or minimized.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHWINFO.dwFlags">
+            <summary>
+            The Flash Status.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHWINFO.uCount">
+            <summary>
+            The number of times to Flash the window.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.FlashWindow.FLASHWINFO.dwTimeout">
+            <summary>
+            The rate at which the Window is to be flashed, in milliseconds. If Zero, the function uses the default cursor blink rate.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.MyMarketCancelOrder.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.MyMarketCancelOrder.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.MyMarketCancelOrder.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.MyMarketSubmitOrder.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.MyMarketSubmitOrder.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.MyMarketSubmitOrder.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.SubmitOrder.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.SubmitOrder.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.SubmitOrder.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.TradeWebIstaller.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.TradeWebIstaller.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TradeWebIstaller.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WebTradeDirectAddin.TWDAddNewColumns.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDAddNewColumns.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDAddNewColumns.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.CallRefresh(System.String)">
+            <summary>
+            CallRefresh.
+            </summary>
+            <param name="imageName">Specifies string argument for the imageName.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.btnRefresh_Click(Microsoft.Office.Core.CommandBarButton,System.Boolean@)">
+            <summary>
+            btnRefresh Click
+            </summary>
+            <param name="ctrl">Specifies CommandBarButton Argument for the ctrl.</param>
+            <param name="cancelDefault">Specifies Bool argument for the cancelDefault.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.ProcessPendingUpdates">
+            <summary>
+            Process all pendin updates from queue
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.DisconnectCalc">
+            <summary>
+            Disconnects calculator and releases resources used.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.DeleteContextMenu">
+            <summary>
+            Removes event handlers of context menu and removes context menu.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.RefreshButtionEnable(System.Boolean,System.String)">
+            <summary>
+            RefreshButtionEnable.
+            </summary>
+            <param name="enable">Specifies Boolo argument For the enable.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.GetColor(WebTradeDirectAddin.TWDUtility.ServerConnectionStatus)">
+            <summary>
+            GetColor
+            </summary>
+            <param name="cstatus">Specifies ServwerrConnectionStatus argument for the cstatus.</param>
+            <returns>Specific Color Return.</returns>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.SetCommentsInCell(System.String,System.String,System.Boolean)">
+            <summary>
+            SetCommentsInCell.
+            </summary>
+            <param name="cellIndex">Specifies String argument for the cellIndex.</param>
+            <param name="comments">Spefies string argument for the comments.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.RunTillSuccess(System.Action,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <param name="maxTryCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.SetCellBackGroundColor(System.Drawing.Color,System.String,System.String,System.Boolean)">
+            <summary>
+            SetCellBackGroundColor And Comments.
+            </summary>
+            <param name="backgroundColor">Specifies Color argument for the backGroundColor.</param>
+            <param name="imageName">Specifies string argument for the imageName.</param>
+            <param name="comments">Soecifies string argument for the strComment.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.IsExcelInEditMode">
+            <summary>
+            True if Excel is in edit mode. Else false
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.AddComment(Microsoft.Office.Interop.Excel.Range,System.String)">
+            <summary>
+            Add comment to particular cell.
+            </summary>
+            <param name="cell"></param>
+            <param name="comment"></param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.CreateDatatableForExecType(System.String,System.String,System.String)">
+            <summary>
+            Create DataTable for Exec Type. Get Exec From Beast Side and add into DataTable.
+            </summary>
+            <param name="ddID">string argument for the ddId.</param>
+            <param name="dataObj">string argument for the dataObj.</param>
+            <param name="calcName">string argument for the calcName.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.DisplayRefreshButton(System.Int32,Microsoft.Office.Interop.Excel.Range)">
+            <summary>
+            DisplayRefreshButton.
+            </summary>
+            <param name="targetColumn">Specifes int arguemtn for the DisplayRefreshButton.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.RightClickDisableMenu(Microsoft.Office.Interop.Excel.Range)">
+            <summary>
+            Enable/disable context menu items according to cell selection.
+            </summary>
+            <param name="target">Cell range for which to show context menu.</param>
+        </member>
+        <member name="M:WebTradeDirectAddin.TWDUtility.SetMarketFields(Microsoft.Office.Interop.Excel.Range,System.Int32,System.Boolean)">
+             <summary>
+            Set Market Fields
+             </summary>
+        </member>
+        <member name="T:WebTradeDirectAddin.TWDUtility.ServerConnectionStatus">
+            <summary>
+            ConnectionStatus.
+            </summary>
+        </member>
+        <member name="T:WebTradeDirectAddin.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WebTradeDirectAddin.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WebTradeDirectAddin.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WebTradeDirectAddin.Properties.Resources.EXCEL_TWD_CURRENTVERSION">
+            <summary>
+              Looks up a localized string similar to 02.00.27.01.
+            </summary>
+        </member>
+        <member name="P:WebTradeDirectAddin.Properties.Resources.EXCEL_TWD_OBJGUID">
+            <summary>
+              Looks up a localized string similar to BB18EC25-7451-4424-8112-F427080C84D7.
+            </summary>
+        </member>
+        <member name="T:WebTradeDirectAddin.ThisAddIn">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.InternalStartup">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.#ctor(Microsoft.Office.Tools.Excel.ApplicationFactory,System.IServiceProvider)">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.Initialize">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.FinishInitialization">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.InitializeDataBindings">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.InitializeCachedData">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.InitializeData">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.BindToData">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.StartCaching(System.String)">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.StopCaching(System.String)">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.IsCached(System.String)">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.BeginInitialization">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.EndInitialization">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.InitializeControls">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.InitializeComponents">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.NeedsFill(System.String)">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisAddIn.OnShutdown">
+            
+        </member>
+        <member name="T:WebTradeDirectAddin.Globals">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.Globals.#ctor">
+            
+        </member>
+        <member name="T:WebTradeDirectAddin.ThisRibbonCollection">
+            
+        </member>
+        <member name="M:WebTradeDirectAddin.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+            
+        </member>
+    </members>
+</doc>

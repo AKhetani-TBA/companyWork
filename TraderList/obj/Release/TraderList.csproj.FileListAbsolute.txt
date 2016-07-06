@@ -1,0 +1,3 @@
+D:\Personal\Private Repository\TraderList\obj\Release\TraderList.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\TraderList\obj\Release\TraderListAddin.Properties.Resources.resources
+D:\Personal\Private Repository\TraderList\obj\Release\TraderList.csproj.GenerateResource.Cache

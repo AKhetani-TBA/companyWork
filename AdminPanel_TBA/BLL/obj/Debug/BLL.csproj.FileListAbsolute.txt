@@ -1,0 +1,26 @@
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\BLL.dll.config
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\BLL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\BLL.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\BASE.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\DAL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\log4net.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\TBA.LogUtility.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\BASE.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\DAL.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\bin\Debug\log4net.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\obj\Debug\BLL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BLL\obj\Debug\BLL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\BLL.dll.config
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\BLL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\BLL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\BASE.dll
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\DAL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\log4net.dll
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\TBA.LogUtility.dll
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\BASE.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\DAL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\bin\Debug\log4net.xml
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\obj\Debug\BLL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\BLL\obj\Debug\BLL.pdb

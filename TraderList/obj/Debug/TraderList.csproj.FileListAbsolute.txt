@@ -1,0 +1,48 @@
+D:\Personal\TraderList\bin\Debug\TraderListAddin.dll.config
+D:\Personal\TraderList\bin\Debug\TraderListAddin.dll
+D:\Personal\TraderList\bin\Debug\TraderListAddin.pdb
+D:\Personal\TraderList\bin\Debug\TraderListAddin.dll.manifest
+D:\Personal\TraderList\bin\Debug\TraderListAddin.vsto
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
+D:\Personal\TraderList\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.xml
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\TraderList\obj\Debug\TraderListAddin.Properties.Resources.resources
+D:\Personal\TraderList\obj\Debug\TraderList.csproj.GenerateResource.Cache
+D:\Personal\TraderList\obj\Debug\TraderListAddin.dll
+D:\Personal\TraderList\obj\Debug\TraderListAddin.pdb
+D:\Personal\Private Repository\TraderList\bin\Debug\TraderListAddin.dll.config
+D:\Personal\Private Repository\TraderList\bin\Debug\TraderListAddin.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\TraderListAddin.pdb
+D:\Personal\Private Repository\TraderList\bin\Debug\TraderListAddin.dll.manifest
+D:\Personal\Private Repository\TraderList\bin\Debug\TraderListAddin.vsto
+D:\Personal\Private Repository\TraderList\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\Microsoft.Practices.Prism.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\TheBeastAppsAddin.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\WebTradeDirectAddin.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\TBA.BeastModels.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\log4net.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\Ionic.Zip.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\System.Net.Http.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\System.Net.Http.Formatting.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\TBA.BeastInterface.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\Newtonsoft.Json.dll
+D:\Personal\Private Repository\TraderList\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\TheBeastAppsAddin.pdb
+D:\Personal\Private Repository\TraderList\bin\Debug\TheBeastAppsAddin.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\WebTradeDirectAddin.pdb
+D:\Personal\Private Repository\TraderList\bin\Debug\WebTradeDirectAddin.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\Ionic.Zip.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\System.Net.Http.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\System.Net.Http.Formatting.xml
+D:\Personal\Private Repository\TraderList\bin\Debug\Newtonsoft.Json.xml
+D:\Personal\Private Repository\TraderList\obj\Debug\TraderListAddin.Properties.Resources.resources
+D:\Personal\Private Repository\TraderList\obj\Debug\TraderList.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\TraderList\obj\Debug\TraderListAddin.dll
+D:\Personal\Private Repository\TraderList\obj\Debug\TraderListAddin.pdb
+D:\Personal\Private Repository\TraderList\obj\Debug\TraderList.csprojResolveAssemblyReference.cache

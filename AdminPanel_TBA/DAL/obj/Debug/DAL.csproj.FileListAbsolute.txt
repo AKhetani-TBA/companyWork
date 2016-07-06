@@ -1,0 +1,22 @@
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\DAL.dll.config
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\DAL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\DAL.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\BASE.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\log4net.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\TBA.LogUtility.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\BASE.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\bin\Debug\log4net.xml
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\obj\Debug\DAL.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\DAL\obj\Debug\DAL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\DAL.dll.config
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\DAL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\DAL.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\BASE.dll
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\log4net.dll
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\TBA.LogUtility.dll
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\BASE.pdb
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\bin\Debug\log4net.xml
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\obj\Debug\DAL.dll
+D:\Personal\Private Repository\AdminPanel_TBA\DAL\obj\Debug\DAL.pdb

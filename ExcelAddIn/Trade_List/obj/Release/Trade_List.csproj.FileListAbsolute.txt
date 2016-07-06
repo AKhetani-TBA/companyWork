@@ -1,0 +1,12 @@
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\obj\Release\Trade_List.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\obj\Release\Trade_List.Properties.Resources.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\obj\Release\Trade_List.csproj.GenerateResource.Cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\Trade_List.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\Trade_List.pdb
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\Trade_List.dll.manifest
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\Trade_List.vsto
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\MouseKeyboardActivityMonitor.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\obj\Release\Trade_List.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Trade_List\obj\Release\Trade_List.pdb

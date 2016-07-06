@@ -1,0 +1,234 @@
+﻿body
+{
+}
+
+.header-bg
+{
+    background-color: #F0F0F0;
+}
+
+.footer-bg
+{
+    background: url("../images/footerNoise.png") repeat scroll 0 0 transparent;
+    background-repeat: repeat;
+    background-position:  center;
+    color: #BFC7CE;
+    display: block;
+    height: 70px;
+}
+
+.logo
+{
+    /*background: url("../images/splash1.jpg") no-repeat scroll left top transparent;*/
+    background-position: center;
+    color: #3c8dbc;
+    height: 56px;
+    height: 100px;
+}
+
+.logoF2
+{
+    background: url("../images/F2_logo.png") no-repeat scroll left top transparent;
+    color: #777777;
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: 200;    
+    padding: 30px 50px 30px;
+    text-indent: -9000px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.tagline-divider
+{
+    border-left: 1px solid #B2BBC3;
+    float: left;
+    height: 30px;
+    margin: 20px 20px 0;
+}
+
+.examplePage
+{
+    background: url("../images/F2TopShadowBorder.png") no-repeat scroll center top #FFFFFF;
+    padding-bottom: 50px;
+    padding-top: 6px;
+}
+
+.AutoUrl_Table {
+    /*border:2px solid #3B3B3B;*/
+    border-collapse: collapse;
+    margin: 0px 0px 15px 0px;
+}
+
+    .AutoUrl_Table td {
+        /*border:1px solid #E0E0E0;*/
+        padding: 0px 3px 0px 3px;
+    }
+
+    .AutoUrl_Table input[type=text] {
+        margin: 4px 0px 4px 4px !important;
+        height: 20px !important;
+        line-height: 25px !important;
+    }
+
+    .AutoUrl_Table select {
+        margin: 4px 0px 4px 4px !important;
+        height: 30px !important;
+        line-height: 25px !important;
+    }
+
+.AutoUrl_CompanyTitle,
+.AutoUrl_CompanyTitle_CMEICAP {
+    font-family: 'Segoe UI', Calibri, Verdana;
+    font-weight: bold;
+    font-size: 18px;
+    color: Navy;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 25px;
+}
+
+.AutoUrl_CompanyTitle_CMEICAP {
+    color: #3B3B3B;
+}
+
+.AutoUrl_TableTitle,
+.AutoUrl_TableTitle_CMEICAP {
+    font-family: Calibri, Verdana;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    border-bottom: 3px solid Navy;
+    background-color: #3B3B3B;
+}
+
+.AutoUrl_TableTitle_CMEICAP {
+    background-color: #4F94CD;
+    padding-left: 15px !important;
+}
+
+.dvCheckboxHiglisht {
+    float: left;
+    padding: 2px 15px;
+    width: auto;
+}
+
+/*--- 16/4/2015 ---*/
+.searchHldr{display:block;width:100%;margin:0;padding:5px 0;position:relative;min-height: 44px;font-size:11px;}
+.searchHldr .btn-primary {margin-left:10px;}
+.searchHldr table {width:100%;}
+.searchHldr table tr td{padding:2px 5px;}
+.searchHldr table tr td select, .searchHldr table tr td input.txtBox{width:100%;height:30px;font-size:14px;}
+.searchHldr table tr td select.abc{width:auto;height:26px;}
+/*.searchHldr table tr td select, .searchHldr table tr td input.txtBox{height:26px;}*/
+.searchHldr table tr td.bigSelectBox{width:23.5%;}
+.searchHldr table tr td.mediumSelectBox{width:20%;}
+.searchHldr table tr td.smallSelectBox{width:15%;}
+.searchHldr table tr td.btnBox{width:5%;}
+
+.beastSessionSummary {table-layout: fixed;}
+.beastSessionSummary tbody tr td{font-size:11px;word-wrap:break-word;padding: 2px;}
+.beastSessionSummary thead tr th{font-size:12px;font-weight:bold;color:#000;padding: 5px;}
+
+
+#beastLogs{width:99%;margin:0 auto;}
+
+#beastLogs.ui-widget-content {
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  color: #222222;
+  -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#beastLogs .ui-widget-header {
+  border: 1px solid #aaaaaa;
+  background: #cccccc ;
+  color: #222222;
+  font-weight: bold;
+  -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#beastLogs.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  margin-bottom: -1px;
+  padding-bottom: 1px;
+}
+
+#beastLogs.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  top: 0;
+  margin: 1px .2em 0 0;
+  border-bottom-width: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+
+#beastLogs .ui-state-default, #beastLogs .ui-widget-content #beastLogs .ui-state-default, #beastLogs .ui-widget-header .ui-state-default {
+  border: 1px solid #d3d3d3;
+  background:#e6e6e6;
+  font-weight: normal;
+  color: #555555;
+  -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#beastLogs .ui-state-active, #beastLogs .ui-widget-content .ui-state-active, #beastLogs .ui-widget-header .ui-state-active {
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  font-weight: normal;
+  color: #212121;
+  border-bottom:none;
+  -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#beastLogs .ui-state-default a, #beastLogs .ui-state-default a:link, #beastLogs .ui-state-default a:visited {
+  color: #555555;
+  text-decoration: none;
+}
+
+.calendarSearch {display: block; padding: .5em 1.4em 0; margin: 0; clear: both; text-align: right; min-height: 48px;}
+
+.allLogTbl {float:left;display:inline-block;width:68%;}
+.allLogTbl table {width:100%;}
+.allLogTbl table tr td {padding:5px;text-align:left; font-size:12px;}
+.allLogTbl table tr td ul li label {font-size:12px;}
+
+.ui-tabs .ui-tabs-panel{clear:both;padding-top: 0px;padding-left: 0px;padding-bottom: 0px;}
+.ui-tabs .ui-tabs-nav li a {
+    padding: 5px 1em;
+    font-size: 14px;
+}
+
+.beastLogs .box{height: auto;padding:10px;overflow: visible;border: 1px solid #8080FF;background-color:#fff;}
+
+.boxAllLogSummaryTbl{overflow-y:hidden;overflow-x:scroll;clear: both;}
+.caret {
+    vertical-align: middle;margin-left:5px;
+}
+.content {padding: 20px 15px;margin-left:20px;}
+.pagination li a {color:#000;}
+
+
+
+.prev, .next {
+    cursor:pointer;
+}
+
+

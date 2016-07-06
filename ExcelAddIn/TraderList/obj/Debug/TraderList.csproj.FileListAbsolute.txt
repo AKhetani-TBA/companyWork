@@ -1,0 +1,15 @@
+D:\Personal\TraderList\bin\Debug\TraderListAddin.dll.config
+D:\Personal\TraderList\bin\Debug\TraderListAddin.dll
+D:\Personal\TraderList\bin\Debug\TraderListAddin.pdb
+D:\Personal\TraderList\bin\Debug\TraderListAddin.dll.manifest
+D:\Personal\TraderList\bin\Debug\TraderListAddin.vsto
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll
+D:\Personal\TraderList\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Excel.v4.0.Utilities.xml
+D:\Personal\TraderList\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\TraderList\obj\Debug\TraderListAddin.Properties.Resources.resources
+D:\Personal\TraderList\obj\Debug\TraderList.csproj.GenerateResource.Cache
+D:\Personal\TraderList\obj\Debug\TraderListAddin.dll
+D:\Personal\TraderList\obj\Debug\TraderListAddin.pdb
+D:\Personal\TraderList\obj\Debug\TraderList.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Beast_Barclay_Addin.dll.config
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Beast_Barclay_Addin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Beast_Barclay_Addin.pdb
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Beast_Barclay_Addin.dll.manifest
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Beast_Barclay_Addin.vsto
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\MouseKeyboardActivityMonitor.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\obj\Release\Beast_Barclay_Addin.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\obj\Release\Beast_Barclay_Addin.Properties.Resources.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\obj\Release\Beast_Barclay_Addin.ProposedLimit.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\obj\Release\Beast_Barclay_Addin.csproj.GenerateResource.Cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\obj\Release\Beast_Barclay_Addin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\Barclay\obj\Release\Beast_Barclay_Addin.pdb

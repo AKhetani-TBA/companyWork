@@ -1,0 +1,120 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <style>
+        th
+        {
+            background-color: #6E6E6E;
+            color: White;
+        }
+        table
+        {
+            border-radius: 6px;
+            border: 1px solid;
+        }
+        input:disabled
+        {
+            background: #F2F2F2;
+        }
+        .inputWidth
+        {
+            width: 80px;
+        }
+        .inputHidden
+        {
+            display: none;
+        }
+    </style>
+    <title></title>
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var table, xmlEle, Action, ID, Row, Qty, Price, CreateXml, OrderType, IsBind, UserId, OrderID;
+        function LoadXml() {
+            try {
+
+                // var xmlEle = "<?xml version='1.0' encoding='utf-8'?><ExcelInfo><Action>GetPrice</Action><Rebind>1</Rebind><CUSIP><C A='BUY' ID='26442CAH7' R='-1' Q='34' P='43543.78' /><C A='BUY' ID='976656CF3' R='-1' Q='45' P='45444' /><C A='BUY' ID='06050XVU4' R='-1' Q='45' P='3344.23' /><C A='BUY' ID='24702RAG6' R='-1' Q='234' P='222.34' /></CUSIP></ExcelInfo>";
+                xmlEle = $("#HdnOrderXml").val();
+                xmlEle = $.parseXML(xmlEle);
+                IsBind = $(xmlEle).find("Rebind").text();
+                OrderType = $(xmlEle).find("Action").text();
+                if (OrderType == "CancelOrder")
+                    $('#dvSubmitOrder').append("<table><tr><th>OrderID</th><th>Action</th><th>Cusips</th><th>Qty</th><th>Price</th></tr></table>");
+                else
+                    $('#dvSubmitOrder').append("<table><tr><th>Action</th><th>Cusips</th><th>Qty</th><th>Price</th></tr></table>");
+
+                table = $('#dvSubmitOrder').children();
+                $(xmlEle).find("C").each(function () {
+                    Action = $(this).attr("A");
+                    ID = $(this).attr("ID");
+                    Row = $(this).attr("R");
+                    Qty = $(this).attr("Q");
+                    Price = $(this).attr("P");
+                    UserId = $(this).attr("U");
+
+                    if (OrderType == "CancelOrder") {
+                        OrderID = $(this).attr("O");
+                        table.append('<tr class="Rows"><td> <input class="Order inputWidth" disabled="disabled" value="' + OrderID + '" /></td><td> <input class="Action inputWidth" disabled="disabled" value="' + Action + '" /><input class="Row inputHidden" type="hidden"  value="' + Row + '" /></td><td><input class="Cusip inputWidth" disabled="disabled" value="' + ID + '" /></td><td><input class="Qty inputWidth" disabled="disabled" MaxLength="9" onkeypress="return isNumberKey(event)" value="' + Qty + '" /></td><td><input  class="Price inputWidth"  disabled="disabled" MaxLength="9" onkeypress="return isNumberKey(event)" value="' + Price + '" /></td></tr>');
+                    }
+                    else {
+                        table.append('<tr class="Rows"><td> <input class="Action inputWidth" disabled="disabled" value="' + Action + '" /><input class="Row inputHidden" type="hidden"  value="' + Row + '" /></td><td><input class="Cusip inputWidth" disabled="disabled" value="' + ID + '" /></td><td><input class="Qty inputWidth" MaxLength="9" onkeypress="return isNumberKeyWithoutDot(event)"  value="' + Qty + '" /></td><td><input  class="Price inputWidth" MaxLength="9" onkeypress="return isNumberKey(event)" value="' + Price + '" /></td></tr>');
+                    }
+                });
+            }
+            catch (e) {
+                alert(e.Message);
+            }
+        }
+
+        function GetXml() {
+            try {
+                CreateXml = "<?xml version='1.0' encoding='utf-8'?><ExcelInfo><Action>" + OrderType + "</Action><Rebind>" + IsBind + "</Rebind><CUSIP>";
+                $(".Rows").each(function () {
+                    Action = $(this).find('.Action').val();
+                    Cusip = $(this).find('.Cusip').val();
+                    Qty = $(this).find('.Qty').val();
+                    Row = $(this).find('.Row').val();
+                    Price = $(this).find('.Price').val();
+                    if (OrderType == "CancelOrder") {
+                        OrderID = $(this).find('.Order').val();
+                        Child = "<C  O='" + OrderID + "'  U='" + UserId + "'/>";
+                    }
+                    else {
+                        Child = "<C A='" + Action + "' ID='" + Cusip + "' R='" + Row + "' Q='" + Qty + "' P='" + Price + "'  U='" + UserId + "'/>";
+                    }
+                    CreateXml += Child;
+                });
+                CreateXml += "</CUSIP></ExcelInfo>";
+                $("#HdnGetOrderxml").val(CreateXml);
+            }
+            catch (e) {
+                alert(e.Message);
+            }
+        }
+        //**************************** TextBox Validation******************************
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function isNumberKeyWithoutDot(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57 || charCode == 46)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="dvSubmitOrder">
+    </div>
+    <input type="hidden" id="HdnGetOrderxml" runat="server" />
+    <input type="hidden" id="HdnOrderXml" />
+    <!-- <input type="button" id="btnSubmitOrder" value="Submit Order" onclick="GetXml();" />-->
+</body>
+</html>

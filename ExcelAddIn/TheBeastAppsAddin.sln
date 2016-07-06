@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBeastAppsAddin", "ExcelAddIn5\TheBeastAppsAddin.csproj", "{93289261-6680-4779-B167-2E128B5763DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeastCustomAddIn", "BeastCustomAddIn\BeastCustomAddIn.csproj", "{54DDBA14-CBE5-4FC2-8F46-20BBFC67F80B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeastShareAreaAddin", "BeastShareAreaAddin\BeastShareAreaAddin.csproj", "{A06AC447-7FB3-401A-BA67-3CD5E7574CA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTradeDirectAddin", "WebTradeDirectAddin\WebTradeDirectAddin.csproj", "{119FC9F2-6213-4DC6-B972-142C5A9A6BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beast_Barclay_Addin", "Barclay\Beast_Barclay_Addin.csproj", "{08363795-F4D0-4A73-9A43-F97D9642506A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beast_RFQ_Addin", "RFQAddin\Beast_RFQ_Addin.csproj", "{5DA080A9-02C9-4CD4-A3F2-920C5D4FE3E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beast_MarketData_Addin", "MarketData\Beast_MarketData_Addin.csproj", "{D0421D26-38DA-4B45-A61B-AC0AE90C886C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraderList", "..\..\..\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\TraderList\TraderList.csproj", "{ABB126A7-857B-4794-8FBF-380C67704AE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93289261-6680-4779-B167-2E128B5763DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93289261-6680-4779-B167-2E128B5763DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93289261-6680-4779-B167-2E128B5763DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93289261-6680-4779-B167-2E128B5763DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54DDBA14-CBE5-4FC2-8F46-20BBFC67F80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54DDBA14-CBE5-4FC2-8F46-20BBFC67F80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54DDBA14-CBE5-4FC2-8F46-20BBFC67F80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54DDBA14-CBE5-4FC2-8F46-20BBFC67F80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06AC447-7FB3-401A-BA67-3CD5E7574CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06AC447-7FB3-401A-BA67-3CD5E7574CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06AC447-7FB3-401A-BA67-3CD5E7574CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06AC447-7FB3-401A-BA67-3CD5E7574CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{119FC9F2-6213-4DC6-B972-142C5A9A6BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119FC9F2-6213-4DC6-B972-142C5A9A6BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119FC9F2-6213-4DC6-B972-142C5A9A6BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119FC9F2-6213-4DC6-B972-142C5A9A6BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08363795-F4D0-4A73-9A43-F97D9642506A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08363795-F4D0-4A73-9A43-F97D9642506A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08363795-F4D0-4A73-9A43-F97D9642506A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08363795-F4D0-4A73-9A43-F97D9642506A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA080A9-02C9-4CD4-A3F2-920C5D4FE3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA080A9-02C9-4CD4-A3F2-920C5D4FE3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA080A9-02C9-4CD4-A3F2-920C5D4FE3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA080A9-02C9-4CD4-A3F2-920C5D4FE3E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0421D26-38DA-4B45-A61B-AC0AE90C886C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0421D26-38DA-4B45-A61B-AC0AE90C886C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0421D26-38DA-4B45-A61B-AC0AE90C886C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0421D26-38DA-4B45-A61B-AC0AE90C886C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB126A7-857B-4794-8FBF-380C67704AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB126A7-857B-4794-8FBF-380C67704AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB126A7-857B-4794-8FBF-380C67704AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB126A7-857B-4794-8FBF-380C67704AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+	EndGlobalSection
+	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+	EndGlobalSection
+	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+	EndGlobalSection
+	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+	EndGlobalSection
+	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+	EndGlobalSection
+EndGlobal

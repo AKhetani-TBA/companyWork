@@ -1,0 +1,22 @@
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.pdb
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.dll.manifest
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.vsto
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\MouseKeyboardActivityMonitor.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\obj\Release\Beast_ExcelRTDViewer_Addin.Properties.Resources.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.csproj.GenerateResource.Cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.pdb
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.pdb
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.dll.manifest
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Release\Beast_MarketData_Addin.vsto
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Release\Beast_ExcelRTDViewer_Addin.Properties.Resources.resources
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.dll
+D:\Personal\Private Repository\ExcelAddIn\MarketData\obj\Release\Beast_MarketData_Addin.pdb

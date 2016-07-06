@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Server>
+  <INDIADB>
+    <add name="TC_ConnStr" connectionString="Data Source=indiadb;Initial Catalog=Tradecapture;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="SS_ConnStr" connectionString="Data Source=indiadb;Initial Catalog=SessionServer;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="AS_ConnStr" connectionString="Data Source=indiadb;Initial Catalog=AppStore;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+  </INDIADB>
+  <TEST>
+    <add name="TC_ConnStr" connectionString="Data Source=beasttest1;Initial Catalog=Tradecapture;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="SS_ConnStr" connectionString="Data Source=beasttest1;Initial Catalog=SessionServer;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="AS_ConnStr" connectionString="Data Source=beasttest1;Initial Catalog=AppStore;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+  </TEST>
+  <PROD>
+    <add name="TC_ConnStr" connectionString="Data Source=beastdb;Initial Catalog=Tradecapture;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="SS_ConnStr" connectionString="Data Source=beastdb;Initial Catalog=SessionServer;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="AS_ConnStr" connectionString="Data Source=beastdb;Initial Catalog=AppStore;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+  </PROD>
+  <AMAZON>
+    <add name="TC_ConnStr" connectionString="Data Source=172.30.5.110;Initial Catalog=Tradecapture;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="SS_ConnStr" connectionString="Data Source=172.30.5.110;Initial Catalog=SessionServer;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="AS_ConnStr" connectionString="Data Source=172.30.5.110;Initial Catalog=AppStore;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+  </AMAZON>
+  <AZURE>
+    <add name="TC_ConnStr" connectionString="Data Source=indiadb;Initial Catalog=Tradecapture;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="SS_ConnStr" connectionString="Data Source=indiadb;Initial Catalog=SessionServer;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+    <add name="AS_ConnStr" connectionString="Data Source=indiadb;Initial Catalog=AppStore;Integrated Security=false; User ID = rradmin; Password = rradmin" providerName="System.Data.SqlClient"/>
+  </AZURE>
+</Server>

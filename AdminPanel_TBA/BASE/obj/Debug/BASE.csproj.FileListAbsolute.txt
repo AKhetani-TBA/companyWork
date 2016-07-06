@@ -1,0 +1,4 @@
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BASE\bin\Debug\BASE.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BASE\bin\Debug\BASE.pdb
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BASE\obj\Debug\BASE.dll
+D:\REPOSITORIES\TheBeastWeb\AdminPanel_TBA\BASE\obj\Debug\BASE.pdb

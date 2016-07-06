@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ExcelInfo>
+<Action>SubmitQuotes</Action>
+<QUOTES>
+<Q ID='cusip1' S='Buy' Qty='10'  QReqID='82'></Q>
+<Q ID='cusip2' S='Buy' Qty='10'  QReqID='0'></Q>
+</QUOTES>
+<Client>
+<C E ='test1@thebeastapps.com'> </C>
+<C E ='test2@thebeastapps.com'> </C>
+<C E ='test3@thebeastapps.com'> </C>
+<C E ='test4@thebeastapps.com'> </C>
+</Client>
+</ExcelInfo>

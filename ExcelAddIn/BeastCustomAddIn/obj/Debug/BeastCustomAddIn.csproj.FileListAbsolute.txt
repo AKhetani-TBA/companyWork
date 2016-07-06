@@ -1,0 +1,30 @@
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.dll.config
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.pdb
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\MouseKeyboardActivityMonitor.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.csprojResolveAssemblyReference.cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.CancelOrder.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.Properties.Resources.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.SubmitOrder.resources
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.csproj.GenerateResource.Cache
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.dll
+D:\REPOSITORIES\BeastExcel\TheBeastExcelAddInApps\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.pdb
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.dll.config
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.pdb
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.dll.manifest
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\BeastCustomAddIn.vsto
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\MouseKeyboardActivityMonitor.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\MouseKeyboardActivityMonitor.xml
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.CancelOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.Properties.Resources.resources
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.SubmitOrder.resources
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.csproj.GenerateResource.Cache
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.dll
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.pdb
+D:\Personal\Private Repository\ExcelAddIn\BeastCustomAddIn\obj\Debug\BeastCustomAddIn.csprojResolveAssemblyReference.cache
