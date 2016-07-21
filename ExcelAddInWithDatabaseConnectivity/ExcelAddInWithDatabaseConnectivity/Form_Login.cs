@@ -22,20 +22,20 @@ namespace ExcelAddInWithDatabaseConnectivity
             strUsername = txt_Username.Text;
             strPassword = txt_Password.Text;
 
-            Service1 webService = new Service1();
+            //Service1 webService = new Service1();
 
-            DataSet ds = webService.LoginCheck(strUsername, strPassword);
+            //DataSet ds = webService.LoginCheck(strUsername, strPassword);
 
-            if (ds == null)
-            {
-                return;
-            }
-            this.Close();
+            //if (ds == null)
+            //{
+            //    return;
+            //}
+            //this.Close();
 
-            foreach (DataTable dt in ds.Tables)
-            {
-                FillRecordsFromDataTableToExcelSheet(dt);
-            }
+            //foreach (DataTable dt in ds.Tables)
+            //{
+            //    FillRecordsFromDataTableToExcelSheet(dt);
+            //}
         }
 
         private void FillRecordsFromDataTableToExcelSheet(DataTable dt)

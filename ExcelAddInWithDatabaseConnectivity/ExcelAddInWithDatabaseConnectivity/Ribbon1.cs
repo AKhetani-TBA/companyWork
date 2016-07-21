@@ -5,6 +5,7 @@ using Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Tools.Ribbon;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
+using System.Reflection;
 
 namespace ExcelAddInWithDatabaseConnectivity
 {
@@ -33,19 +34,55 @@ namespace ExcelAddInWithDatabaseConnectivity
 
             GetCellContextMenu().Reset(); // reset the cell context menu back to the default
 
-            Globals.ThisAddIn.Application.SheetBeforeRightClick += new Excel.AppEvents_SheetBeforeRightClickEventHandler(Application_SheetBeforeRightClick);
+            //Globals.ThisAddIn.Application.SheetBeforeRightClick += new Excel.AppEvents_SheetBeforeRightClickEventHandler(Application_SheetBeforeRightClick);
 
-            workSheet = Globals.ThisAddIn.Application.ActiveWorkbook.Worksheets.Add();
+            //workSheet = Globals.ThisAddIn.Application.ActiveWorkbook.Worksheets.Add();
+            //Microsoft.Office.Interop.Excel.Workbook xlWorkbook = Globals.ThisAddIn.Application.ActiveWorkbook;
+            //Microsoft.Office.Interop.Excel.Sheets xlSheets = null;
+            //Microsoft.Office.Interop.Excel.Worksheet worksheet = null;
 
-            //  *****          Set Default Location of Window Form              ***** 
+            //xlSheets = xlWorkbook.Sheets as Microsoft.Office.Interop.Excel.Sheets;
 
-            WindowWebBrowser webBrowser = new WindowWebBrowser();
-            LatestX = webBrowser.Location.X;
-            LatestY = webBrowser.Location.Y;
+            //// The first argument below inserts the new worksheet as the first one
+            //worksheet = (Microsoft.Office.Interop.Excel.Worksheet)xlSheets.Add(xlSheets[1], Type.Missing, Type.Missing, Type.Missing);
+
+            //////  *****          Set Default Location of Window Form              ***** 
+
+            ////WindowWebBrowser webBrowser = new WindowWebBrowser();
+            ////LatestX = webBrowser.Location.X;
+            ////LatestY = webBrowser.Location.Y;
+            //Globals.ThisAddIn.Application.ActiveWorkbook.ActiveSheet.Change += new DocEvents_ChangeEventHandler(CellChange);
+                
+        }
+
+        private void CellChange(Range Target)
+        {
+            MessageBox.Show(""+Target.get_Address(Missing.Value, Missing.Value,
+      Excel.XlReferenceStyle.xlA1, Missing.Value, Missing.Value) +
+      " on " + Target.Worksheet.Name);
+
+            Globals.ThisAddIn.Application.ActiveWorkbook.ActiveSheet.Change -= new DocEvents_ChangeEventHandler(CellChange);
         }
 
         private void btn_Login_Click(object sender, RibbonControlEventArgs e)
         {
+
+            Microsoft.Office.Interop.Excel.Workbook xlWorkbook = Globals.ThisAddIn.Application.ActiveWorkbook;
+            Microsoft.Office.Interop.Excel.Sheets xlSheets = null;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = null;
+
+            xlSheets = xlWorkbook.Sheets as Microsoft.Office.Interop.Excel.Sheets;
+
+            // The first argument below inserts the new worksheet as the first one
+            worksheet = (Microsoft.Office.Interop.Excel.Worksheet)xlSheets.Add(xlSheets[1], Type.Missing, Type.Missing, Type.Missing);
+
+            ////  *****          Set Default Location of Window Form              ***** 
+
+            //WindowWebBrowser webBrowser = new WindowWebBrowser();
+            //LatestX = webBrowser.Location.X;
+            //LatestY = webBrowser.Location.Y;
+            Globals.ThisAddIn.Application.ActiveWorkbook.ActiveSheet.Change += new DocEvents_ChangeEventHandler(CellChange);
+
             Form_Login formLogin = new Form_Login();
             formLogin.ShowDialog();
         }
