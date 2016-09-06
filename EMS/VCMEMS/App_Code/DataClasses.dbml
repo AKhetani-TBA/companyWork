@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Demo_EMS" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=INDIADEV;Initial Catalog=Demo_EMS;Integrated Security=False;User ID=kpatel" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Demo_EMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Emp_ShiftDetails" Member="Emp_ShiftDetails">
+    <Type Name="Emp_ShiftDetail">
+      <Column Name="ShiftId" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DeptId" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ShiftDetail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastAction" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
