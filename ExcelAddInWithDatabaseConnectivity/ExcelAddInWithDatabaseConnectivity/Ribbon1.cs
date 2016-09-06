@@ -120,7 +120,7 @@ namespace ExcelAddInWithDatabaseConnectivity
                 AddExampleMenuItem();
             }            
         }
-
+        
         private void AddExampleMenuItem()
         {
             Office.MsoControlType menuItem = Office.MsoControlType.msoControlButton;

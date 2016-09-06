@@ -49,7 +49,6 @@ D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\Excel
 D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\bin\Debug\ExcelAddInWithDatabaseConnectivity.vsto
 D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
 D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
-D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\obj\Debug\ExcelAddInWithDatabaseConnectivity.csprojResolveAssemblyReference.cache
 D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\obj\Debug\ExcelAddInWithDatabaseConnectivity.Form_Login.resources
 D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\obj\Debug\ExcelAddInWithDatabaseConnectivity.Properties.Resources.resources
 D:\Personal\Private Repository\New Repo\ExcelAddInWithDatabaseConnectivity\ExcelAddInWithDatabaseConnectivity\obj\Debug\ExcelAddInWithDatabaseConnectivity.Ribbon1.resources
