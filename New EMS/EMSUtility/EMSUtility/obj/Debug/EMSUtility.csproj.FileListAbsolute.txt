@@ -74,43 +74,6 @@ E:\EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Razor.xml
 E:\EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.csprojResolveAssemblyReference.cache
 E:\EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.dll
 E:\EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.pdb
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMSUtility.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMSUtility.pdb
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Antlr3.Runtime.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BASE.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BLL.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_DAL.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EntityFramework.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Microsoft.Web.Infrastructure.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Newtonsoft.Json.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Net.Http.Formatting.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.WebHost.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Mvc.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Optimization.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Providers.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Razor.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Deployment.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Razor.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\WebGrease.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BASE.pdb
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BLL.pdb
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_DAL.pdb
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EntityFramework.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Newtonsoft.Json.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Net.Http.Formatting.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.WebHost.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Mvc.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Razor.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Deployment.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Razor.xml
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.csprojResolveAssemblyReference.cache
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.dll
-D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.pdb
 E:\EMSUtility\EMSUtility\bin\EMSUtility.dll
 E:\EMSUtility\EMSUtility\bin\EMSUtility.pdb
 E:\EMSUtility\EMSUtility\bin\Antlr3.Runtime.dll
@@ -186,3 +149,40 @@ E:\EMSUtility\EMSUtility\obj\Debug\EMSUtility.pdb
 \\akhetani\Abhishek Public\ishita\EMSUtility\EMSUtility\obj\Debug\EMSUtility.csprojResolveAssemblyReference.cache
 \\akhetani\Abhishek Public\ishita\EMSUtility\EMSUtility\obj\Debug\EMSUtility.dll
 \\akhetani\Abhishek Public\ishita\EMSUtility\EMSUtility\obj\Debug\EMSUtility.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMSUtility.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMSUtility.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Antlr3.Runtime.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BLL.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EntityFramework.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Microsoft.Web.Infrastructure.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Newtonsoft.Json.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Net.Http.Formatting.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.WebHost.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Mvc.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Optimization.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Providers.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Razor.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Deployment.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Razor.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\WebGrease.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_DAL.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_BLL.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EntityFramework.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\Newtonsoft.Json.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Net.Http.Formatting.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Http.WebHost.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Mvc.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.Razor.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Deployment.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\System.Web.WebPages.Razor.xml
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\bin\EMS_DAL.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMSUtility\obj\Debug\EMSUtility.pdb

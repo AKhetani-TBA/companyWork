@@ -17,5 +17,17 @@ namespace EMS_BLL
         {
             empDalObj = new EmployeeDBHandler();
         }
+
+        public List<DepartmentBase> GetDepartmentNames(int deptId)
+        {
+            try
+            {
+                return (empDalObj.GetEmployeeDocuments(deptId));
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

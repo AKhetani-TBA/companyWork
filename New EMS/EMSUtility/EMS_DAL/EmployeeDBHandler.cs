@@ -11,7 +11,7 @@ namespace EMS_DAL
 {
     public class EmployeeDBHandler
     {
-        public List<DepartmentBase> GetDepartmentNames(int deptId)
+        public List<DepartmentBase> GetEmployeeDocuments(int deptId)
         {
             try
             {
@@ -27,6 +27,5 @@ namespace EMS_DAL
                 return null;
             }
         }
-
     }
 }

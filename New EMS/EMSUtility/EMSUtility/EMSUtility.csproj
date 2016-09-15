@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EMS_BASE">
+      <HintPath>..\EMS_BASE\bin\Debug\EMS_BASE.dll</HintPath>
+    </Reference>
     <Reference Include="EMS_BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\EMS_BLL\bin\Debug\EMS_BLL.dll</HintPath>

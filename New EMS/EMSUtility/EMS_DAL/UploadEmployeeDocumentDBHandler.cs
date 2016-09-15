@@ -31,6 +31,9 @@ namespace EMS_DAL
                 finally
                 {
                     Conn.Close();
+                    Conn.Dispose();
+                    sda.Dispose();
+
                 }
                 return dt;
             }
