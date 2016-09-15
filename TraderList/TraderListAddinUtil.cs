@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using TraderList.Properties;
 using Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
-using TraderListAddin.Properties;
+using TraderListAddin1.Properties;
 
 namespace TraderList
 {

@@ -1440,3 +1440,15 @@ E:\Projects\Original EMS\EMS\4March2014\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_DAL.pdb
 E:\Projects\Original EMS\EMS\4March2014\EMS_BIZ\EMS_BIZ\obj\Debug\EMS_BIZ.csprojResolveAssemblyReference.cache
 E:\Projects\Original EMS\EMS\4March2014\EMS_BIZ\EMS_BIZ\obj\Debug\EMS_BIZ.dll
 E:\Projects\Original EMS\EMS\4March2014\EMS_BIZ\EMS_BIZ\obj\Debug\EMS_BIZ.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\obj\Debug\EMS_BIZ.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_BIZ.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_BIZ.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_DAL.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\bin\Debug\EMS_DAL.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\obj\Debug\EMS_BIZ.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BIZ\EMS_BIZ\obj\Debug\EMS_BIZ.pdb

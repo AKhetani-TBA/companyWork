@@ -282,7 +282,7 @@ function changeContent(ids) {
     iframe.setAttribute('id', 'ifrm');
     iframe.filter = "chroma(color = #FFFFFF)";
     iframe.setAttribute("allowtransparency", "true");
-    iframe.setAttribute("filter:chroma(color = '#FFFFFF')", "");
+    //iframe.setAttribute("filter:chroma(color = '#FFFFFF')", "");
     iframe.setAttribute('src', ids);
     var dest = document.getElementById('content_body');
     dest.innerHTML = '';
@@ -577,16 +577,21 @@ function changeDesignHeight() {
     document.getElementById('left_menu').style.height = document.getElementById('main_body').offsetHeight;
 }
 function changeColors(id, parent) {
-    var t = document.getElementById(parent);
-    var i = 0;
-    for (i = 0; i < document.getElementById(parent).childNodes.length; i++) {
-        document.getElementById(parent).childNodes[i].style.backgroundColor = "#606060";
+    try{
+        var t = document.getElementById(parent);
+        var i = 0;
+        for (i = 0; i < document.getElementById(parent).childNodes.length; i++) {
+            document.getElementById(parent).childNodes[i].style.backgroundColor = "#606060";
+        }
+        if (id != '') {
+            id.style.backgroundColor = "white";
+        }
     }
-    if (id != '') {
-        id.style.backgroundColor = "white";
+    catch (ex) {
     }
 }
 function changeColors2(id, parent) {
+    try {
     var t = document.getElementById(parent);
     var i = 0;
     for (i = 0; i < document.getElementById(parent).childNodes.length; i++) {
@@ -595,7 +600,9 @@ function changeColors2(id, parent) {
     if (id != '') {
         id.style.backgroundColor = "white";
     }
-
+}
+    catch (ex) {
+}
 }
 function changeAll() {
     for (i = 0; i < document.getElementById("leavediv").childNodes.length; i++) {

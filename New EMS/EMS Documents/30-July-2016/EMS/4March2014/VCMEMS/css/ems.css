@@ -1,0 +1,210 @@
+/* the overlayed element */
+
+.payslip{
+     padding-left: 10px;
+}
+.txtclass
+{
+    font-family: Tahoma,Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    border: 1px solid #888888;
+    }
+.linkStyle{
+    color:White ;
+    border:1px solid #232323;
+    border-bottom-color: Black;
+    border-top-color: #333333;
+    font-size:20px;
+    font-family: Tw Cen MT Condensed;
+    width :113px;
+    text-align:left;
+    padding-left: 15px;
+}
+.togglediv{
+    display:none;
+}
+.linkSpanStyle{
+    color: Black;
+    background-color :#606060;
+    font-size:19px;
+    font-family: Tw Cen MT Condensed;
+    width :110px;
+    height: 23px;
+    text-align:left;
+    padding-left: 20px;
+}
+.subLinkStyle{
+    color: Black;
+    background-color :black;
+    font-size:19px;
+    font-family: Tw Cen MT Condensed;
+    width :110px;
+    height: 23px;
+    text-align:left;
+    padding-left: 20px;
+}
+.subLinkSpanStyle{
+    color: Black;
+    background-color :#707070;
+    font-size:18px;
+    font-family: Tw Cen MT Condensed;
+    width :100px;
+    height: 23px;
+    text-align:left;
+    padding-left: 30px;
+}
+div#voverlay {
+	/* growing background image 
+    background-image:url(../images/back.png);*/
+	width:900px;
+	height:600px;
+	background-repeat :no-repeat ;
+	/* dimensions after the growing animation finishes 640 480 */
+	/* initially overlay is hidden */
+	display:none;	
+	/* some padding to layout nested elements nicely 
+	padding:20px; */
+	/*filter:alpha(opacity=80);*/
+}
+.gridheader{
+   	text-decoration :none;
+    background-color: gray;
+    font-size: 18px;     
+    font-family:Tw Cen MT Condensed;
+    color:White;       
+}
+.gridlink{
+   text-decoration :none;  
+   font-size: 13px;   
+   font-family: Microsoft Sans Serif;
+   color:White;   
+}
+/* default close button positioned on upper right corner */
+div#voverlay div.close ,div#mainmsgbox div.close{
+	background-image:url(../images/close.png);
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:45px;
+	width:45px;
+	text-align :center ;
+	
+}
+div#voverlay div.close:hover{
+	background-position:0 100%;
+}
+div#vcontainer,div#msgcontainer{
+	/*filter:alpha(opacity=50);*/
+	text-align :left ;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	color :White;	
+	/*background:url(../images/loading.gif) no-repeat 50% 50%; */
+}
+.hideselect{
+    display:none ;
+}
+.left_menu_item{
+	border: 1px solid #232323;
+	overflow:hidden;
+}
+.link{
+	text-decoration: none; 
+	color: #FFFFFF; 
+	font-family: 'Tw Cen MT Condensed';
+    font-size: 20px
+}
+.left_shade{
+	width: 20px;
+	min-height:440px; 
+	background-image: url('../images/aa_left_shade.png');
+    background-repeat: repeat-y; 
+    float: left;
+}
+.right_shade{
+	width: 14px; 
+	min-height:440px; 
+	background-image: url(../images/aa_right_shade.png);
+    background-repeat: repeat-y; 
+    float: right;
+}
+.right_cut{
+	position: relative; z-index: 2000; width: 0; height: 0;
+    border-right: 20px solid #03152D; border-top: 20px solid #03152D; border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent; float: left;
+}
+.left_cut{
+	position: relative; z-index: 2000; width: 0; height: 0;
+    border-left: 20px solid #0B2850; border-top: 20px solid #0B2850; border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent; float: left; top: 0px; left: 0px;
+}
+.thinBordergray {
+    BORDER-RIGHT: gray 1px solid; 
+    BORDER-TOP: gray 1px solid; 
+    BORDER-LEFT: gray 1px solid; 
+    BORDER-BOTTOM: gray 1px solid;
+}
+.ddl{
+   height:20px;
+   font-family : Microsoft Sans Serif;
+   font-size: 12px;
+   vertical-align:top;
+}
+.EMS_font{
+   font-family: Microsoft Sans Serif;
+   font-size: 12px;
+}
+.EMS_font_small{
+   font-family: Microsoft Sans Serif;
+   font-size: 12px;
+}
+.button{
+    font-family: Microsoft Sans Serif;
+    font-size:13px;
+    color: #333333;
+}
+.timepicker{
+    width: 68px; font-size:10px; font-family:Arial; overflow: auto;
+    border: solid 1px silver; background-color: White; 
+}
+.timepicker #span hover{
+  background-color:Red;
+  cursor: pointer; 
+}
+.logs_div{ 
+    border-left: solid 3px #999999;
+    border-top: solid 1px #C0C0C0;
+    border-right: solid 1px #C0C0C0;
+    border-bottom: solid 3px #999999;
+    background-color:#F0F0F0;
+    position:absolute;
+    display:none;
+    width: 371px; 
+    z-index:1000;
+}
+.status_div{
+    border-left:  solid 3px #999999;
+    border-top: solid 1px #C0C0C0;
+    border-right:solid 1px #C0C0C0;
+    border-bottom: solid 3px #999999;
+    background-color:#F0F0F0;
+    display:none;
+    width: 195px; 
+    z-index:1000;
+}
+.userrightpopup{
+    float:right;
+    border-left:  solid 3px #999999;
+    border-top: solid 1px #C0C0C0;
+    border-right:solid 1px #C0C0C0;
+    border-bottom: solid 3px #999999;
+    background-color:#F0F0F0;
+    height: 337px;
+    width: 24%;
+}

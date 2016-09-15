@@ -595,3 +595,8 @@ E:\Projects\Original EMS\EMS\4March2014\EMS_BASE\EMS_BASE\bin\Debug\EMS_BASE.dll
 E:\Projects\Original EMS\EMS\4March2014\EMS_BASE\EMS_BASE\bin\Debug\EMS_BASE.pdb
 E:\Projects\Original EMS\EMS\4March2014\EMS_BASE\EMS_BASE\obj\Debug\EMS_BASE.dll
 E:\Projects\Original EMS\EMS\4March2014\EMS_BASE\EMS_BASE\obj\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_BASE\EMS_BASE\bin\Debug\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BASE\EMS_BASE\bin\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_BASE\EMS_BASE\obj\Debug\EMS_BASE.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\EMS\EMS_BASE\EMS_BASE\obj\Debug\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_BASE\EMS_BASE\obj\Debug\EMS_BASE.pdb

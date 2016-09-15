@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "UploadFile";
+    Layout = "~/Views/Shared/_HRLayout.cshtml";
+}
+
+@*<h2>UploadFile</h2>
+@using (Html.BeginForm("UploadFile","Upload",FormMethod.Post, new { enctype = "multipart/form-data" })) {
+<label for="file">Upload File:</label>
+<input type="file" name="file" id="file" /><br />
+<input type="submit" value="Upload File" /><br /><br />
+@ViewBag.Result
+}*@
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="boxMainHldr cf">
+            <div class="boxTitle"><i class="fa fa-users"></i>Upload Files of Employee</div>
+            <form class="form-horizontal">
+                <form class="form-horizontal" action="UploadFile" method="POST">
+                    <div class="boxBody">
+                        <label for="file">Upload File:</label>
+                        <input type="file" name="file" id="file" value="" /><br />
+                        @ViewBag.Result
+                    </div>
+                    <div class="boxFooter">
+                        <button class="btn btn-primary" name="save" value="Upload File" type="submit">Update FIle</button>
+                        <button class="btn btn-default" type="button">Cancel</button>
+                    </div>
+                </form>
+
+@*                @using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="boxBody">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="inputEmail3">Upload File:</label>
+                            <div class="col-sm-10">
+                                <input type="file" id="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxFooter">
+                        <button class="btn btn-primary" type="submit">Upload File</button>
+                        <button class="btn btn-default" type="button">Cancel</button>
+                    </div>
+                    @ViewBag.Result
+                }
+            </form>*@
+        </div>
+    </div>
+</div>

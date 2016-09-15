@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Security.Principal;
+using System.Windows.Forms;
 
 public partial class HR_EmployeeDefault : System.Web.UI.Page
 {
@@ -19,6 +20,15 @@ public partial class HR_EmployeeDefault : System.Web.UI.Page
                 //    Response.Write("" + Session["UserName"] + Session["usertype"]);
                 //    Response.Redirect("../HR/LoginFailure.aspx");
                 //}
+
+                //MessageBox.Show("HttpContext.Current.User.Identity.Name: " + HttpContext.Current.User.Identity.Name);
+                //MessageBox.Show("HttpContext.Current.User.Identity.AuthenticationType: " + HttpContext.Current.User.Identity.AuthenticationType);
+
+                //bool checkBool = HttpContext.Current.User.Identity.IsAuthenticated;
+                //MessageBox.Show("HttpContext.Current.User.Identity.IsAuthenticated: " + checkBool);
+
+                //String t = HttpContext.Current.Request.ServerVariables["LOGON_USER"];
+                //MessageBox.Show("HttpContext.Current.Request.ServerVariables[" + "LOGON_USER" + "]: " + t);
 
                 WindowsPrincipal winPrincipal = (WindowsPrincipal)HttpContext.Current.User;
                 if (winPrincipal.Identity.IsAuthenticated == true)

@@ -1005,7 +1005,7 @@ namespace TraderList
                 _xmlRoot = _xdCusip.AppendChild(_xdCusip.CreateElement("ExcelInfo"));
                 _xmlRoot.AppendChild(_xdCusip.CreateElement("Action")).InnerText = actionType;
                 _xmlRoot.AppendChild(_xdCusip.CreateElement("Version")).InnerText =
-                    Convert.ToString(TraderListAddin.Properties.Resources.EXCEL_TRADERLIST_CURRENTVERSION);
+                    Convert.ToString(TraderListAddin1.Properties.Resources.EXCEL_TRADERLIST_CURRENTVERSION);
                 _childCusip = _xmlRoot.AppendChild(_xdCusip.CreateElement("LIMITS"));
 
                 XmlNode childnodeCusip = null;

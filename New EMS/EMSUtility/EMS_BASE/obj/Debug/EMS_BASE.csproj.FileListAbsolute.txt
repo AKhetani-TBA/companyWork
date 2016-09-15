@@ -1,0 +1,10 @@
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.dll
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.csprojResolveAssemblyReference.cache

@@ -1047,3 +1047,10 @@ E:\Projects\Original EMS\EMS\4March2014\EMS_DAL\EMS_DAL\bin\Debug\EMS_BASE.pdb
 E:\Projects\Original EMS\EMS\4March2014\EMS_DAL\EMS_DAL\obj\Debug\EMS_DAL.csprojResolveAssemblyReference.cache
 E:\Projects\Original EMS\EMS\4March2014\EMS_DAL\EMS_DAL\obj\Debug\EMS_DAL.dll
 E:\Projects\Original EMS\EMS\4March2014\EMS_DAL\EMS_DAL\obj\Debug\EMS_DAL.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\bin\Debug\EMS_DAL.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\bin\Debug\EMS_DAL.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\bin\Debug\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\bin\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\obj\Debug\EMS_DAL.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\obj\Debug\EMS_DAL.dll
+D:\Personal\Private Repository\New Repo\EMS\EMS_DAL\EMS_DAL\obj\Debug\EMS_DAL.pdb
