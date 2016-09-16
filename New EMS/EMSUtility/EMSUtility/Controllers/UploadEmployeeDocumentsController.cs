@@ -18,7 +18,7 @@ namespace EMSUtility.Controllers
         public UploadEmployeeDocumentsController()
         {
             uploadEmpDocAccessLayerBLL = new UploadEmployeeDocumentAccessLayer();
-        } 
+        }
 
         [HttpGet]
         public ActionResult Index()

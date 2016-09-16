@@ -20,7 +20,7 @@ namespace EMSUtility
 
             try
             {
-                //WindowsPrincipal winPrincipal = (WindowsPrincipal)HttpContext.Current.User;
+                WindowsPrincipal winPrincipal = (WindowsPrincipal)HttpContext.Current.User;
 
                 //if (winPrincipal.Identity.IsAuthenticated == true)
                 //{

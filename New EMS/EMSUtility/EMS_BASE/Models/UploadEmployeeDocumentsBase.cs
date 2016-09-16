@@ -25,5 +25,10 @@ namespace EMS_BASE.Models
 
         public Int64 EmpId { get; set; }
         public string ConnStr { get; set; }
+
+        //Set Data
+        public int empid { get; set; }
+        public string name { get; set; }
+        public string dept { get; set; }
     }
 }

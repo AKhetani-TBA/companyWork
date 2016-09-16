@@ -8,13 +8,15 @@ using System.Web.Routing;
 
 namespace EMSUtility
 {
+    [Authorize]
     public class RouteConfig
     {
+        [Authorize]
         public static void RegisterRoutes(RouteCollection routes)
         {
             try
             {
-                //WindowsPrincipal winPrincipal = (WindowsPrincipal)HttpContext.Current.User;
+                WindowsPrincipal winPrincipal = (WindowsPrincipal)HttpContext.Current.User;
 
                 //if (winPrincipal.Identity.IsAuthenticated == true)
                 //{
@@ -25,7 +27,7 @@ namespace EMSUtility
                         url: "{controller}/{action}/{id}",
                         defaults: new { controller = "Employee", action = "Index", id = UrlParameter.Optional }
                     );
-                //}
+               // }
             }
             catch (Exception ex) { }
         }

@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace EMSUtility.Controllers
 {
@@ -11,6 +13,9 @@ namespace EMSUtility.Controllers
     {
         EmployeeAccessLayer empBLL;
 
+        //protected override void Initialize(RequestContext requestContext)
+        //{
+        //}
         public EmployeeController()
         {
             empBLL = new EmployeeAccessLayer();
@@ -18,7 +23,7 @@ namespace EMSUtility.Controllers
         
         public ActionResult Index()
         {
-            //ViewBag.Message = "This is custom message from Emplyee controller.";
+            string name = WindowsPrincipal.Current.Identity.Name;
             return View();
         }
 
