@@ -39,6 +39,7 @@ namespace EMSUtility.Controllers
             {
                 if (file != null)
                 {
+                    string[] temp = file.FileName.Split('.');
                     var path = System.Configuration.ConfigurationManager.AppSettings["DocumentPath"] + file.FileName;
                     file.SaveAs(path);
                     ViewBag.Result = "File Uploaded Successfully";

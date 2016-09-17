@@ -7,3 +7,4 @@ D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\bin\Debug\EM
 D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
 D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
 D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\New EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.csprojResolveAssemblyReference.cache
