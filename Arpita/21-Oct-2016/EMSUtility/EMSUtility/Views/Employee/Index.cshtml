@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2 class="topHeading"> Authentication Issue </h2>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p>
+                    <label style="color:red;"> @ViewBag.ErrorMessage </label>
+                    @*@Html.Label("lblErrorMessage",Convert.ToString( ViewBag.ErrorMessage) ,new {style = "color:red" })*@
+                </p>
+            </div>
+        </div>
+
+        
+    </div>
+</div>

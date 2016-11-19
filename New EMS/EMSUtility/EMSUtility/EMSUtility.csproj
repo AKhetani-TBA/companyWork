@@ -133,7 +133,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EntryModuleForEmployeeController.cs" />
     <Compile Include="Controllers\UploadEmployeeDocumentsController.cs" />
+    <Compile Include="Controllers\DocumentUploadAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -252,7 +254,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -263,6 +267,8 @@
     <Content Include="Views\Department\Department.cshtml" />
     <Content Include="Views\UploadEmployeeDocuments\UploadFile.cshtml" />
     <Content Include="Views\UploadEmployeeDocuments\Index.cshtml" />
+    <Content Include="Views\DocumentUploadAdmin\Index.cshtml" />
+    <Content Include="Views\EntryModuleForEmployee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

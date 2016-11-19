@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+using System.Web.Mvc;
+
+
+namespace EMS_BASE.Models
+{
+    public class DesignationAllocation
+    {
+        #region Public Properties
+
+        public int DesignationAllocationId { get; set; }
+
+        public int DesignationId { get; set; }
+
+        public string DesignationName { get; set; }
+
+        public int EmployeeId { get; set; }
+
+        public string EmployeeName { get; set; }
+
+        public DateTime WithEffectFrom { get; set; }
+
+        public DateTime? ToDate { get; set; }
+
+        public string CreatedBy { get; set; }
+
+        public DateTime? CreatedDate { get; set; }
+
+        public string ModifyBy { get; set; }
+
+        public DateTime? ModifyDate { get; set; }
+
+        public char LastAction { get; set; }
+
+        public DateTime? CeaseDate { get; set; }
+
+        #endregion
+    }
+}

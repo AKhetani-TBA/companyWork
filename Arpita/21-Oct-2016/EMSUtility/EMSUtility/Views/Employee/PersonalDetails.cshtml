@@ -1,0 +1,152 @@
+﻿@model EMS_BASE.Models.EmployeeBasicDetails
+@{
+    ViewBag.Title = "PersonalDetails";
+    Layout = "~/Views/Shared/_HRLayout.cshtml";
+}
+<style>
+    .errorMsg {
+        color: red;
+    }
+
+    .successMsg {
+        color: green;
+    }
+</style>
+@Html.Label("", (string)TempData["Message"], new { @id = "lblValidateUserMessage", @class = "successMsg" })
+@Html.Label("", (string)TempData["ErrorMessage"], new { @id = "lblValidateUserMessage", @class = "errorMsg" })
+
+@using (Html.BeginForm("PersonalDetails", "Employee", FormMethod.Post, new { @class = "form-horizontal", @id = "PersonalDetailsForm" }))
+{
+    <div class="boxMainHldr marginBottom_30 cf">
+        <div class="boxTitle"><i class="fa fa-users"></i> User Basic Info</div>
+        <div class="boxBody">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">First Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.FirstName)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Middle Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.MiddleName)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Last Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.LastName)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Gender</label>
+                        <div class="col-sm-8">
+                            @Html.RadioButtonFor(empDetails => empDetails.Gender, 'M', new { @id = "radioGender" }) Male
+                            @Html.RadioButtonFor(empDetails => empDetails.Gender, 'F', new { @id = "radioGender" }) Female
+                            @*<label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male</label>
+                                <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female</label>*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Date of Birth</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="birthDate">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfBirth)
+                                @*<input type="text" class="form-control" />*@<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Contact No.</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.ContactNo)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Joining Date</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="joiningDate">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfJoining)<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Technology</label>
+                        <div class="col-sm-8">
+                            @Html.DropDownListFor(empDetails => empDetails.DeptId, (SelectList)ViewBag.DepartmentNames)
+                            @*<select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Domain User</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.DomainUser)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="boxFooter">
+            <button class="btn btn-primary" type="submit" >Save</button>
+            <button class="btn btn-default" type="button">Cancel</button>
+        </div>
+    </div>
+}
+
+@section MyScripts {
+    <script src="@Url.Content("https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js")"></script>
+    <script src="~/Scripts/moment-with-locales.js"></script>
+    <script src="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js")"></script>
+    @*<script src="@Url.Content("~/Scripts/PageScripts/PersonalDetails.js")"></script>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#joiningDate').datetimepicker({
+                defaultDate: new Date(),
+                format: 'MM/DD/YYYY'
+            });
+        });
+    </script>
+}

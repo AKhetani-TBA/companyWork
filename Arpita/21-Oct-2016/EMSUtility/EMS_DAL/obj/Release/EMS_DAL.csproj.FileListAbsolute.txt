@@ -1,0 +1,7 @@
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\bin\Release\EMS_DAL.dll
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\bin\Release\EMS_DAL.pdb
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\bin\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\bin\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\obj\Release\EMS_DAL.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\obj\Release\EMS_DAL.dll
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_DAL\obj\Release\EMS_DAL.pdb

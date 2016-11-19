@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentUploadAdminAccessLayer.cs" />
     <Compile Include="EmployeeAccessLayer.cs" />
+    <Compile Include="EntryModuleForEmployeeAccessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UploadEmployeeDocumentAccessLayer.cs" />
   </ItemGroup>

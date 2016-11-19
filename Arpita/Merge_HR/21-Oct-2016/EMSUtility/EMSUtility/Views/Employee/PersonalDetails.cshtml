@@ -1,0 +1,301 @@
+﻿@model EMS_BASE.Models.EmployeeBasicDetails
+@{
+    ViewBag.Title = "PersonalDetails";
+    Layout = "~/Views/Shared/_HRLayout.cshtml";
+}
+<style>
+    .errorMsg {
+        color: red;
+    }
+
+    .successMsg {
+        color: green;
+    }
+</style>
+
+@Html.Label("", (string)TempData["Message"], new { @id = "lblValidateUserMessage", @class = "successMsg" })
+@Html.Label("", (string)TempData["ErrorMessage"], new { @id = "lblValidateUserMessage", @class = "errorMsg" })
+
+@using (Html.BeginForm("AddPersonalDetails", "Employee", FormMethod.Post, new { @class = "form-horizontal", @id = "PersonalDetailsForm" }))
+{
+    <div class="boxMainHldr marginBottom_30 cf">
+        <div class="boxTitle"><i class="fa fa-users"></i> User Basic Info</div>
+
+        <div class="boxBody">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">First Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.FirstName, new { @id = "txtFname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Middle Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.MiddleName, new { @id = "txtMname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Last Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.LastName, new { @id = "txtLname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Gender</label>
+                        <div class="col-sm-8">
+                            @*@Html.RadioButtonFor(empDetails => empDetails.Gender,"")new { @class = "validate[required]" }*@
+                            @*@Html.RadioButtonFor(empDetails => empDetails.Gender, "M",0,false)@Html.Label("Male")
+                            @Html.RadioButtonFor(empDetails => empDetails.Gender, "F",1,false)@Html.Label("Female")*@
+                            @*<label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" class="validate[required]"> Male</label>
+                            <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" class="validate[required]"> Female</label>*@
+                            <label>@Html.RadioButtonFor(empDetails => empDetails.Gender, "M")Male</label>
+                            <label>@Html.RadioButtonFor(empDetails => empDetails.Gender, "F")Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Date of Birth</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="birthDate">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfBirth, new { @id = "txtBirthDate", @class = "validate[required,funcCall[validateDate]] form-control" })<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">WEF</label>
+                            <div class="col-sm-8">
+                                <div class="input-group date" id="createDate">
+                                    @Html.TextBoxFor(empDetails => empDetails.CreatedDate, new { @id = "txtCreateDate", @class = "validate[required,funcCall[validateDate]] form-control" })<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Contact No</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="contactNo">
+                                @Html.TextBoxFor(empDetails => empDetails.ContactNo, new { @maxlength="10",@style ="width:215px",@id = "txtNo", @class = "validate[required,funcCall[validateNum]] form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Joining Date</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="doJ">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfJoining, new { @id = "txtDoj", @class = "validate[required,funcCall[validateDate]] form-control" })<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Technology</label>
+                        <div class="col-sm-8">
+                            @Html.DropDownListFor(empDetails => empDetails.DeptId, (SelectList)ViewBag.DepartmentNames)
+                            @Html.DropDownListFor(empDetails => empDetails.DeptId, ViewBag.DepartmentNames as IEnumerable<SelectListItem>, "Select Department", new { @class = "validate[required]" })
+                        </div>
+                    </div>
+                </div>*@
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Technology</label>
+                        <div class="col-sm-8">
+                            @*@Html.DropDownListFor(empDetails => empDetails.DeptId, (SelectList)ViewBag.DepartmentNames)*@
+                            @Html.DropDownListFor(empDetails => empDetails.TechId, ViewBag.TechnologyNames as IEnumerable<SelectListItem>, "Select Technology", new { @class = "validate[required]" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Domain User</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.DomainUser, new { @id = "txtUser", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxFooter">
+            <button class="btn btn-primary" value="submit" type="submit">Save</button>
+            <button class="btn btn-default" type="button">Cancel</button>
+        </div>
+
+    </div>
+}
+
+@section MyScripts {
+
+    @*<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>*@
+    @*<script src="@Url.Content("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")"></script>*@
+    @*<link href="@Url.Content("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")" rel="stylesheet" />*@
+    @*<script src="@Url.Content("~/Scripts/jquery-1.12.3.js")"></script>*@
+    @*<script src="js/jquery-1.6.min.js" type="text/javascript"></script>*@
+
+    <link href="@Url.Content("https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/datetimepicker.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/css/ValidationEngine.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")"></script>
+    <script src="@Url.Content("https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment-with-locales.js")"></script>
+
+    <script src="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/PageScripts/Departments.js")"></script>
+    <script src="@Url.Content("~/Scripts/common.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/npm.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment.js")"></script>
+    <script src="@Url.Content("~/Scripts/datetimepicker.js")"></script>
+
+    <link href="@Url.Content("~/Content/css/validationEngine.jquery.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/jquery.validationEngine-en.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validationEngine.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.dataTables.js")"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#PersonalDetailsForm").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+            $("#edit").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+            $("#delete").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+        });
+
+        //Date Format validation
+        function validateDate(field, rules, i, options) {
+            //var regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;  //MM-DD-YYYY
+            var regex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/; //DD-MM-YYYY
+            if (!regex.test(field.val())) {
+                return "Please enter date in DD/MM/YYYY format."
+                //return "Please enter date in MM/DD/YYYY format."
+            }
+        };
+
+        //Contact Number Validation
+        function validateNum(field, rules, i, options) {
+            var regex = /^(\d{10})$/;
+            if (!regex.test(field.val())) {
+                return "Contact Number Not Valid."
+            }
+        };
+
+        //Allow only numbers in Textbox for Contact Number
+        $('#txtNo').bind('keypress', function (evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode != 45 && charCode != 47 && charCode > 31
+             && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        });
+
+        //Allow only Characters
+        $('#txtFname').bind('keypress', function (e) {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                return true;
+            else
+                return false;
+        });
+
+        $('#txtMname').bind('keypress', function (e) {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                return true;
+            else
+                return false;
+        });
+
+        $('#txtLname').bind('keypress', function (e) {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+                return true;
+            else
+                return false;
+        });
+
+        $('#txtUser').bind('keypress', function (e) {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || (charCode == 92))
+                return true;
+            else
+                return false;
+        });
+
+        //Allow only Numbers in Texztbox for Date
+        $('#txtBirthDate').bind('keypress', function (evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode != 45 && charCode != 47 && charCode > 31
+             && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        });
+
+        $('#txtDoj').bind('keypress', function (evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode != 45 && charCode != 47 && charCode > 31
+             && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        });
+
+        function saveClick() {
+            $('#txtFname').val('');
+            $('#txtMname').val('');
+            $('#txtLname').val('');
+            $('#txtNo').val('');
+            $('#txtUser').val('');
+        };
+
+        //$('#btnSave').click(){ };
+
+    </script>
+}

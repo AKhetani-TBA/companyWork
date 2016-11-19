@@ -1,0 +1,48 @@
+Inetpub root:-
+\\indiadev\c$\Inetpub\wwwroot\VCMEMS
+
+
+Publish root:-
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (3)\PrecompiledWeb\VCMEMS
+
+11december2013
+-----------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (4)\PrecompiledWeb\VCMEMS
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (4)\PrecompiledWeb\VCMEMS
+
+27 December 2013
+-----------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (4)\PrecompiledWeb\VCMEMS
+
+2 January 2014
+--------------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (4)\PrecompiledWeb\VCMEMS
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (5)\PrecompiledWeb\VCMEMS
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (6)\PrecompiledWeb\VCMEMS
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (6)\PrecompiledWeb\VCMEMS
+
+3 January 2014
+--------------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (6)\PrecompiledWeb\VCMEMS
+
+6 January 2014
+--------------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (7)\PrecompiledWeb\VCMEMS
+
+10 January 2014
+----------------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (7)\PrecompiledWeb\VCMEMS
+
+18 January 2014(with some error due to target framework set to "4.0" insteadof "3.5")
+-----------------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (8)\PrecompiledWeb\VCMEMS
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (9)\PrecompiledWeb\VCMEMS
+
+20 January 2014
+----------------------
+C:\Documents and Settings\mthakkar\My Documents\Visual Studio 2010\Projects\VCMEMS.sln (9)\PrecompiledWeb\VCMEMS
+
+
+4 March 2014
+----------------------
+C:\Users\mthakkar\Documents\Visual Studio 2010\Projects\VCMEMS\PrecompiledWeb\VCMEMS

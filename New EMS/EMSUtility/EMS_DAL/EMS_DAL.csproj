@@ -30,8 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EMS_BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EMS_BASE">
       <HintPath>..\EMS_BASE\bin\Debug\EMS_BASE.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -43,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentUploadAdminDBHandler.cs" />
     <Compile Include="EmployeeDBHandler.cs" />
+    <Compile Include="EntryModuleForEmployeeDBHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UploadEmployeeDocumentDBHandler.cs" />
   </ItemGroup>

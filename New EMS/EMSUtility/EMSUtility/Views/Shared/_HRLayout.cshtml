@@ -86,8 +86,9 @@
                 <div class="panel menuMain">
                     <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse1"><i class="fa fa-user"></i>Employees </a><i class="indicator glyphicon glyphicon-chevron-right"></i></div>
                     <div id="collapse1" class="collapse menuMainInner">
-                        <a href="~/Employee/AddEmployeeBasicDetails"><i class="fa fa-user"></i>Basic Details </a>
-                        <a href="~/UploadEmployeeDocuments/Index"><i class="fa fa-user"></i> Upload Documents</a>
+                        <a href="~/Employee/AddEmployeeBasicDetails"><i class="fa fa-user"></i>Basic Details</a>
+                        <a href="~/UploadEmployeeDocuments/Index"><i class="fa fa-user"></i>Upload Documents</a>
+                        <a href="~/EntryModuleForEmployee/Index"><i class="fa fa-user"></i>Entry Module For Employee</a>
 @*                        <a><i>
                             @Html.ActionLink("Upload User","UploadFile", "UploadEmployeeDocuments",)
                         </i></a>*@
@@ -164,7 +165,7 @@
                 <div class="panel menuMain">
                     <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse9"><i class="fa fa-user-secret"></i>Administration</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
                     <div id="collapse9" class="collapse menuMainInner">
-                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="~/DocumentUploadAdmin/Index"><i class="fa fa-user"></i> Sections & Exemptions </a>
                         <a href="#"><i class="fa fa-user"></i>Link 2</a>
                         <a href="#"><i class="fa fa-user"></i>Link 3</a>
                         <a href="#"><i class="fa fa-user"></i>Link 4</a>
@@ -189,5 +190,6 @@
     <script src="@Url.Content("~/Scripts/datetimepicker.js")"></script>
 
     @RenderSection("scripts", required: false)
+    @RenderSection("MyScripts", required: false)
 </body>
 </html>

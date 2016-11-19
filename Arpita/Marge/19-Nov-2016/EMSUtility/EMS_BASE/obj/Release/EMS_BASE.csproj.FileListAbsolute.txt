@@ -1,0 +1,24 @@
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\30-Sep-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\Marge\21-Oct-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\Marge\21-Oct-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\Marge\21-Oct-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\Arpita\Marge\21-Oct-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\Marge\21-Oct-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\Merge_HR\21-Oct-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\Merge_HR\21-Oct-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\Merge_HR\21-Oct-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\Arpita\Merge_HR\21-Oct-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\Merge_HR\21-Oct-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.pdb
+\\jparikh\MergedEMS\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.dll
+\\jparikh\MergedEMS\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.pdb
+\\jparikh\MergedEMS\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.csprojResolveAssemblyReference.cache
+\\jparikh\MergedEMS\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.dll
+\\jparikh\MergedEMS\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\Marge\16-Nov-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\Marge\16-Nov-2016\EMSUtility\EMS_BASE\bin\Release\EMS_BASE.pdb
+D:\Personal\Private Repository\New Repo\Arpita\Marge\16-Nov-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.csprojResolveAssemblyReference.cache
+D:\Personal\Private Repository\New Repo\Arpita\Marge\16-Nov-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.dll
+D:\Personal\Private Repository\New Repo\Arpita\Marge\16-Nov-2016\EMSUtility\EMS_BASE\obj\Release\EMS_BASE.pdb

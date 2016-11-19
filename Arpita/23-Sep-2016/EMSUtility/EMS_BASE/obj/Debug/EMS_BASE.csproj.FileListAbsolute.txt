@@ -1,0 +1,17 @@
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.dll
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb
+C:\Users\arshah\documents\visual studio 2013\Projects\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.csprojResolveAssemblyReference.cache
+E:\EMS\TestEMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.dll
+E:\EMS\TestEMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
+E:\EMS\TestEMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
+E:\EMS\TestEMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb
+E:\EMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.dll
+E:\EMS\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
+E:\EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
+E:\EMS\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb
+D:\EMS\20-Sep-2016\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.dll
+D:\EMS\20-Sep-2016\EMSUtility\EMS_BASE\bin\Debug\EMS_BASE.pdb
+D:\EMS\20-Sep-2016\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.dll
+D:\EMS\20-Sep-2016\EMSUtility\EMS_BASE\obj\Debug\EMS_BASE.pdb

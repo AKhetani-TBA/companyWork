@@ -1,0 +1,473 @@
+﻿@model EMS_BASE.Models.EmployeeBasicDetails
+@{
+    ViewBag.Title = "PersonalDetails";
+    Layout = "~/Views/Shared/_HRLayout.cshtml";
+}
+<style>
+    .errorMsg {
+        color: red;
+    }
+
+    .successMsg {
+        color: green;
+    }
+
+    div.dataTables_info {
+        display: none !important;
+    }
+</style>
+
+@Html.Label("", (string)TempData["Message"], new { @id = "lblValidateUserMessage", @class = "successMsg" })
+@Html.Label("", (string)TempData["ErrorMessage"], new { @id = "lblValidateUserMessage", @class = "errorMsg" })
+
+
+
+@using (Html.BeginForm("AddPersonalDetails", "Employee", FormMethod.Post, new { @class = "form-horizontal", @id = "PersonalDetailsForm" }))
+{
+    <div class="boxMainHldr marginBottom_30 cf">
+        <div class="boxTitle"><i class="fa fa-users"></i> User Basic Info</div>
+        <div class="boxBody">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">First Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.FirstName, new { @id = "txtFname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Middle Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.MiddleName, new { @id = "txtMname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Last Name</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.LastName, new { @id = "txtLname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Gender</label>
+                        <div class="col-sm-8">
+                            <label>@Html.RadioButtonFor(empDetails => empDetails.Gender, "M")Male</label>
+                            <label>@Html.RadioButtonFor(empDetails => empDetails.Gender, "F")Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Date of Birth</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="birthDate">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfBirth, new { @id = "txtBirthDate", @class = "validate[required,funcCall[validateDate]] form-control" })<span class="input-group-addon" id="err"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Contact No</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="contactNo">
+                                @Html.TextBoxFor(empDetails => empDetails.ContactNo, new { @maxlength = "10", @style = "width:215px", @id = "txtNo", @class = "validate[required,funcCall[validateNum]] form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Joining Date</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="doJ">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfJoining, new { @id = "txtDoj", @title = "DOJ Should be Greater than DOB", @class = "validate[required,funcCall[validateDate] form-control" })<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Technology</label>
+                        <div class="col-sm-8">
+                            @Html.DropDownListFor(empDetails => empDetails.TechId, ViewBag.TechnologyNames as IEnumerable<SelectListItem>, "Select Technology", new { @class = "validate[required]" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="inputEmail3">Domain User</label>
+                        <div class="col-sm-8">
+                            @Html.TextBoxFor(empDetails => empDetails.DomainUser, new { @id = "txtUser", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxFooter">
+            <button class="btn btn-primary" value="submit" id="btnAddUserDetails">Save</button>
+            <button class="btn btn-default" type="button" id="btnDeptCancel">Cancel</button>
+        </div>
+
+    </div>
+}
+
+@using (Html.BeginForm("UpdatePersonalDetails", "Employee", FormMethod.Post, new { @id = "UpdatePersonalDetailsForm" }))
+{
+    <div class="boxMainHldr cf">
+        <div class="boxTitle">
+            <div class="row cf">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <i class="fa fa-users"></i>
+                    Employee Details
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 text-right">
+                    <label style="height: 28px;font-size:14px;font-weight:normal;margin-left:35px">Search:</label>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 text-right">
+                    <input type="search" id="txtSearch" style="height: 28px;width: 150%;margin-top:5px" />
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                    <label style="height: 28px;font-size:14px;font-weight:normal">Select Option:</label>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                    <select id="htmddl" style="width:60%; height: 28px; font-size:14px;margin-top: 4px;">
+                        <option value="1">Active</option>
+                        <option value="0">All</option>
+                        <option value="2">Deleted</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="boxBody">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                        <table id="tblEmployeeDetails" class="table table-striped table-bordered" cellspacing="0" data-page-length='5'>
+                            <thead>
+                                <tr>
+                                    <th>Emp.Name</th>
+                                    <th>Gender</th>
+                                    <th>DOB</th>
+                                    <th>Contact No</th>
+                                    <th>DOJ</th>
+                                    <th>Tech.Name</th>
+                                    <th>Created By</th>
+                                    <th>Modify By</th>
+                                    <th>Modify Date</th>
+                                    <th>Edit</th>
+                                    <th>Del</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*@Html.HiddenFor(empdetails => empdetails.TechId, new { @id = "hdnTechId" })*@
+    @Html.HiddenFor(empdetails => empdetails.EmployeeId, new { @id = "hdnEmpId" })
+    @*@Html.HiddenFor(empdetails => empdetails.FirstName, new { @id = "hdnFname" })
+        @Html.HiddenFor(empdetails => empdetails.MiddleName, new { @id = "hdnMname" })
+        @Html.HiddenFor(empdetails => empdetails.LastName, new { @id = "hdnLname" })*@
+
+
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">Edit User Detail</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">First Name</label>
+                            @Html.TextBoxFor(empDetails => empDetails.FirstName, new { @style = "width:175px", @id = "Fname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Middle Name</label>
+                            @Html.TextBoxFor(empDetails => empDetails.MiddleName, new { @style = "width:175px", @id = "Mname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Last Name</label>
+                            @Html.TextBoxFor(empDetails => empDetails.LastName, new { @style = "width:175px", @id = "Lname", @maxlength = "22", @class = "validate[required] form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Date of Birth</label>
+                            <div class="input-group date" id="dob" style="width:85px">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfBirth, new { @style = "width:175px", @id = "txtdob", @class = "validate[required,funcCall[validateDate]] form-control" })<span class="input-group-addon" id="err"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Contact No</label>
+                            @Html.TextBoxFor(empDetails => empDetails.ContactNo, new { @maxlength = "10", @style = "width:175px", @id = "lblContactNoToEdit", @class = "validate[required,funcCall[validateNum]] form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Joining Date</label>
+                            <div class="input-group date" id="doj" style="width:85px">
+                                @Html.TextBoxFor(empDetails => empDetails.DateOfJoining, new { @style = "width:175px", @id = "txtdoj", @class = "validate[required,funcCall[validateDate] form-control" })<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Technology</label>
+                            @Html.DropDownListFor(model => model.TechId, ViewBag.TechnologyNames as IEnumerable<SelectListItem>, "Select Technology ", new { @id = "lblTechToEdit", @class = "validate[required]", @style = "width:180px" })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button id="btnUpdateUserDetails" type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">Delete the Department details</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record? If YES then select Cease date.</div>
+                    <div class="form-group">
+                        <div class="input-group date" id="ceaseDate">
+                            @Html.TextBoxFor(model => model.CeaseDate, new { @id = "txtCeaseDate", @class = "validate[required,funcCall[validateTest]]] form-control" })
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer ">
+                    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}
+
+
+@section MyScripts {
+
+    <link href="@Url.Content("https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/datetimepicker.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/css/ValidationEngine.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment-with-locales.js")"></script>
+
+    <script src="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/PageScripts/UserInfo.js")"></script>
+    <script src="@Url.Content("~/Scripts/common.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment.js")"></script>
+    <script src="@Url.Content("~/Scripts/datetimepicker.js")"></script>
+
+    <link href="@Url.Content("~/Content/css/validationEngine.jquery.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/jquery.validationEngine-en.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validationEngine.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.dataTables.js")"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#PersonalDetailsForm").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+            $("#UpdatePersonalDetailsForm").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+            $("#edit").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+            $("#delete").validationEngine('attach', { promptPosition: "bottomLeft", scroll: false });
+
+        });
+
+
+        //Date Format validation
+        function validateDate(field, rules, i, options) {
+            //var regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;  //MM-DD-YYYY
+            var regex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/; //DD-MM-YYYY
+            if (!regex.test(field.val())) {
+                return "Please enter date in DD/MM/YYYY format."
+                //return "Please enter date in MM/DD/YYYY format."
+            }
+        };
+
+        //Contact Number Validation
+        function validateNum(field, rules, i, options) {
+            var regex = /^(\d{10})$/;
+            if (!regex.test(field.val())) {
+                return "Contact Number Not Valid."
+            }
+        };
+
+        ////Allow only Characters
+        $('#txtFname').bind('keydown', function (e) {            
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode == 8 || charCode == 9 || charCode == 37 || charCode == 38 || charCode == 39 || charCode == 40 || charCode == 46) ||
+                (charCode > 64 && charCode < 91))
+                return true;
+            else
+                return false;
+            
+        });
+
+
+        $('#txtMname').bind('keydown', function (e) {            
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode == 8 || charCode == 9 || charCode == 37 || charCode == 38 || charCode == 39 || charCode == 40 || charCode == 46) ||
+                (charCode > 64 && charCode < 91))
+                return true;
+            else
+                return false;
+        });
+
+        $('#txtLname').bind('keydown', function (e) {            
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode == 8 || charCode == 9 || charCode == 37 || charCode == 38 || charCode == 39 || charCode == 40 || charCode == 46) ||
+                (charCode > 64 && charCode < 91))
+                return true;
+            else
+                return false;
+        });
+
+        $('#txtUser').bind('keydown', function (e) {
+            
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode == 8 || charCode == 9 || charCode == 37 || charCode == 38 || charCode == 39 || charCode == 40 || charCode == 46) ||
+                (charCode > 64 && charCode < 91))
+                return true;
+            else
+                return false;
+        });
+
+        //Allow only Numbers in Textbox
+        $('#txtBirthDate').bind('keypress', function (evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode != 45 && charCode != 47 && charCode > 31
+             && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        });
+
+        $('#txtDoj').bind('keypress', function (evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode != 45 && charCode != 47 && charCode > 31
+             && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        });
+
+        $('#txtNo').bind('keydown', function (e) {            
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        //function test() {
+        $("#txtDoj").tooltip({
+            disabled: true
+        }).on("focusin", function () {
+            var a = $('#txtBirthDate').val();
+            var b = $('#txtDoj').val();
+            if (a > b) {
+                $(this)
+                .tooltip("enable")
+               .tooltip("open");
+            }
+        }).on("focusout", function () {
+            $(this)
+                .tooltip("close")
+                .tooltip("disable");
+        });
+        //};
+        //$(function () {
+        //    debugger;
+        //    $("#txtDoj").tooltip({
+        //        disabled: true
+        //    }).on("focusin", function () {
+        //        var a = $('#txtBirthDate').val();
+        //        var b = $('#txtDoj').val();
+        //        if (a > b) {
+        //            $(this)
+        //            .tooltip("enable")
+        //           .tooltip("open");
+        //        }
+        //    }).on("focusout", function () {
+        //        $(this)
+        //            .tooltip("close")
+        //            .tooltip("disable");
+        //    });
+        //});
+
+
+    </script>
+
+}

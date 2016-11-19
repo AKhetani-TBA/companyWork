@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Office.Tools.Outlook</name>
+	</assembly>
+	<members>
+		<member name="T:Microsoft.Office.Tools.Outlook.Application">
+			<summary>Represents the entire Microsoft Office Outlook application.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.#ctor">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.#ctor(Microsoft.VisualStudio.Tools.Applications.Runtime.IHostItemProvider,Microsoft.VisualStudio.Tools.Applications.Runtime.IRuntimeServiceProvider,System.String,System.Object,System.String)">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.AdvancedSearchComplete">
+			<summary>Occurs when the AdvancedSearch method has completed.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.AdvancedSearchStopped">
+			<summary>Occurs when a specified Search object's Stop method has been executed.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.ItemSend">
+			<summary>Occurs whenever an item is sent, either by the user through an Inspector (before the inspector is closed, but after the user clicks the Send button) or when the Send method is used in a program.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.MAPILogonComplete">
+			<summary>Occurs after the user has logged onto the system.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.NewMail">
+			<summary>Occurs when one or more new e-mail messages are received in the Inbox.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.NewMailEx">
+			<summary>Occurs when one or more new items are received in the Inbox. This event passes a list of entry IDs of all the items received in the Inbox since the last time the event was fired.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.OptionsPagesAdd">
+			<summary>Occurs whenever the Options dialog box (on the Tools menu) or a folder Properties dialog box is opened.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.QuitEvent">
+			<summary>Occurs when Microsoft Office Outlook begins to close.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.Reminder">
+			<summary>Occurs immediately before a reminder is displayed.</summary>
+		</member>
+		<member name="E:Microsoft.Office.Tools.Outlook.Application.Shutdown">
+			<summary>Occurs when Outlook shuts down.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.ActiveExplorer">
+			<summary>Returns the topmost Explorer object on the desktop. If no explorer is active, returns null.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.ActiveInspector">
+			<summary>Returns the topmost Inspector object on the desktop. If no inspector is active, returns null.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.ActiveWindow">
+			<summary>Returns an object representing the topmost Microsoft Office Outlook window on the desktop, either an Explorer or an Inspector object.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.AdvancedSearch(System.String,System.Object,System.Object,System.Object)">
+			<summary>Performs a search based on a specified Microsoft SQL Server search string and returns a Search object.</summary>
+			<param name="Scope">The scope of the search. For example, the name of a folder. It is recommended that the folder name is enclosed within single quotes. Otherwise, the search might not return correct results if the folder name contains special characters including Unicode characters.</param>
+			<param name="SearchSubFolders">Determines if the search will include any of the folder's subfolders.</param>
+			<param name="Tag">The name given as an identifier for the search.</param>
+			<param name="Filter">The DASL search filter that defines the parameters of the search.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.BeginInit">
+			<summary>Begins the Initialization of the Application.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.CopyFile(System.String,System.String)">
+			<summary>Copies a file from a specified location into a Microsoft Office Outlook store and returns an object representing the copied document.</summary>
+			<param name="FilePath">The path name of the object you want to copy.</param>
+			<param name="DestFolderPath">The location you want to copy the file to.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType)">
+			<summary>Creates a new Microsoft Office Outlook item and returns it. The CreateItem method can only create default Outlook items. To create new items using a custom form, use the Add method on the Items collection.</summary>
+			<param name="ItemType">The OlItemType for the new item.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.CreateItemFromTemplate(System.String,System.Object)">
+			<summary>Creates a new Microsoft Office Outlook item from an Outlook template (.oft) and returns the new item.</summary>
+			<param name="TemplatePath">The path and file name of the Outlook template for the new item.</param>
+			<param name="InFolder">The folder in which the item is to be created. If this argument is omitted, the default folder for the item type will be used.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.CreateObject(System.String)">
+			<summary>Creates an Automation object of the specified class. If the application is already running, CreateObject will create a new instance.</summary>
+			<param name="ObjectName">The class name of the object to create.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Dispose(System.Boolean)">
+			<summary>Disposes the Application object. </summary>
+			<param name="disposing">The Outlook application object.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.EndInit">
+			<summary>The ending of the initialization of the Outlook application.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.GetNamespace(System.String)">
+			<summary>Returns a NameSpace object of the specified type.</summary>
+			<param name="Type">Type of namespace to return.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.IsSearchSynchronous(System.String)">
+			<summary>Returns a Boolean indicating if a search will be synchronous or asynchronous.</summary>
+			<param name="LookInFolders">The path name of the folders that the search will search through. It is recommended that the folder name is enclosed within single quotes.</param>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Microsoft.Office.Interop.Outlook._Application.get_Application">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.add_Quit(Microsoft.Office.Interop.Outlook.ApplicationEvents_11_QuitEventHandler)">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.add_Startup(Microsoft.Office.Interop.Outlook.ApplicationEvents_11_StartupEventHandler)">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.remove_Quit(Microsoft.Office.Interop.Outlook.ApplicationEvents_11_QuitEventHandler)">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Microsoft.Office.Interop.Outlook.ApplicationEvents_11_Event.remove_Startup(Microsoft.Office.Interop.Outlook.ApplicationEvents_11_StartupEventHandler)">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Microsoft.VisualStudio.Tools.Applications.Runtime.ISupportInitializeControl.InitializeControl(Microsoft.VisualStudio.Tools.Applications.Runtime.IHostItemProvider,Microsoft.VisualStudio.Tools.Applications.Runtime.IRuntimeServiceProvider,System.String,System.Object,System.String)">
+			<summary>This method supports the Outlook primary interop assembly infrastructure and is not intended to be used directly from your code.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.OnShutdown">
+			<summary>Occurs when the application is shutdown.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.OnStartup">
+			<summary>Occurs when the application starts up.</summary>
+		</member>
+		<member name="M:Microsoft.Office.Tools.Outlook.Application.Quit">
+			<summary>Occurs when Microsoft Office Outlook begins to close.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.AnswerWizard">
+			<summary>Gets the AnswerWizard object for the application.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Assistant">
+			<summary>Gets an Assistant object that represents the Microsoft Office Assistant.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Class">
+			<summary>Gets an OlObjectClass constant indicating the Application class.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.COMAddIns">
+			<summary>Gets a COMAddIns collection that represents all the Component Object Model (COM) add-ins currently loaded in Microsoft Office Outlook.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Explorers">
+			<summary>Gets an Explorers collection object that contains the Explorer objects representing all open explorers.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Inspectors">
+			<summary>Gets an Inspectors collection object that contains the Inspector objects representing all open inspectors.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.LanguageSettings">
+			<summary>Gets a LanguageSettings object for the application that contains the language-specific attributes of Microsoft Office Outlook.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Name">
+			<summary>Gets the display name for the Application object.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Parent">
+			<summary>Gets the parent Object of the Application object</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.ProductCode">
+			<summary>Gets the Microsoft Office Outlook globally unique identifier (GUID) .</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Reminders">
+			<summary>Gets a Reminders collection that represents all current reminders.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Session">
+			<summary>Gets the NameSpace object for the current session.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Tag">
+			<summary>Gets or sets the Tag property of the Application.</summary>
+		</member>
+		<member name="P:Microsoft.Office.Tools.Outlook.Application.Version">
+			<summary>Gets the number of the version.</summary>
+		</member>
+	</members>
+</doc>

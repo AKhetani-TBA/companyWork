@@ -1,0 +1,130 @@
+﻿@model EMS_BASE.Models.EmployeeBasicDetails
+@{
+    ViewBag.Title = "PersonalDetails";
+    Layout = "~/Views/Shared/_HRLayout.cshtml";
+}
+<style>
+    .errorMsg {
+        color: red;
+    }
+
+    .successMsg {
+        color: green;
+    }
+</style>
+@Html.Label("", (string)TempData["Message"], new { @id = "lblValidateUserMessage", @class = "successMsg" })
+@Html.Label("", (string)TempData["ErrorMessage"], new { @id = "lblValidateUserMessage", @class = "errorMsg" })
+
+@using (Html.BeginForm("PersonalDetails", "Employee", FormMethod.Post, new { @class = "form-horizontal", @id = "PersonalDetailsForm" }))
+{
+    <div class="boxMainHldr marginBottom_30 cf">
+        <div class="boxTitle"><i class="fa fa-users"></i> User Basic Info</div>
+            <div class="boxBody">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">First Name</label>
+                            <div class="col-sm-8">
+                               @Html.TextBoxFor(empDetails => empDetails.FirstName)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Middle Name</label>
+                            <div class="col-sm-8">
+                                @Html.TextBoxFor(empDetails => empDetails.MiddleName)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Last Name</label>
+                            <div class="col-sm-8">
+                                @Html.TextBoxFor(empDetails => empDetails.LastName)
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Gender</label>
+                            <div class="col-sm-8">
+                                @Html.RadioButtonFor(empDetails => empDetails.Gender , value ='M' )
+                                <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male</label>
+                                <label class="radio-inline"><input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Date of Birth</label>
+                            <div class="col-sm-8">
+                                <div class="input-group date" id="birthDate">
+                                    <input type="text" class="form-control" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Contact No.</label>
+                            <div class="col-sm-8"> <input type="text"> </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Joining Date</label>
+                            <div class="col-sm-8">
+                                <div class="input-group date" id="joiningDate">
+                                    <input type="text" class="form-control" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Technology</label>
+                            <div class="col-sm-8">
+                                @Html.DropDownListFor(empDetails => empDetails.DeptId, (SelectList)ViewBag.DepartmentNames)
+                                @*<select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label" for="inputEmail3">Domain User</label>
+                            <div class="col-sm-8"> <input type="text"> </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="boxFooter">
+                <button class="btn btn-primary" type="button">Save</button>
+                <button class="btn btn-default" type="button">Cancel</button>
+            </div>
+    </div>
+}

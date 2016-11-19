@@ -1,0 +1,785 @@
+﻿using EMS_BASE.Models;
+using EMS_BASE.Models.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace EMS_DAL
+{
+    public class EmployeeDBHandler
+    {
+
+        /// <summary>
+        /// Object of Config Class
+        /// </summary>
+
+        Config config = new Config();
+
+        public DataSet GetDepartmentNames(int deptId, char lastAction)
+        {
+            SqlConnection sqlConnection = null;
+            DataSet dataSet = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_GetDepartmentsDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DeptId", deptId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LastAction", lastAction));
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        dataSet = new DataSet();
+                        sqlDataAdapter.Fill(dataSet);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return dataSet;
+        }
+
+        public DataSet GetTechnology(int techId, char lastAction)
+        {
+            SqlConnection sqlConnection = null;
+            DataSet dataSet = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {                    
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_GetTechnologyDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_TechId", techId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LastAction", lastAction));
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        dataSet = new DataSet();
+                        sqlDataAdapter.Fill(dataSet);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return dataSet;
+        }
+
+        #region Employee
+
+        public List<EmployeeBasicDetails> GetEmpDetails(int empId, int activeId)
+        {
+            SqlConnection sqlConnection = null;
+            List<EmployeeBasicDetails> empDetails = new List<EmployeeBasicDetails>();
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_GetEmployeeBasicDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_EmpId", empId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_active", activeId));
+                        sqlConnection.Open();
+                        using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                        {
+
+                            while (dataReader.Read())
+                            {
+                                EmployeeBasicDetails emp = new EmployeeBasicDetails();
+                                emp.EmployeeId = Convert.ToInt32(dataReader["EmployeeId"]);
+                                emp.FirstName = Convert.ToString(dataReader["FirstName"]);
+                                emp.MiddleName = Convert.ToString(dataReader["MiddleName"]);
+                                emp.LastName = Convert.ToString(dataReader["LastName"]);
+                                emp.EmployeeName = emp.FirstName + " " + emp.LastName;
+                                emp.Gender = Convert.ToChar(dataReader["Gender"]);
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("DateOfBirth")))
+                                {
+                                    emp.DateOfBirth = Convert.ToString(dataReader["DateOfBirth"]);
+                                    //emp.DateOfBirth = DateTime.ParseExact(emp.DateOfBirth, "dd/MM/yyyy", null);
+                                }
+                                emp.ContactNo = Convert.ToString(dataReader["ContactNo"]);
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("DateOfJoining")))
+                                {
+                                    emp.DateOfJoining = Convert.ToString(dataReader["DateOfJoining"]);
+                                }
+                                emp.TechId = Convert.ToInt32(dataReader["TechId"]);
+                                emp.TechName = Convert.ToString(dataReader["TechName"]);
+
+                                //emp.DomainUser = Convert.ToString(dataReader["DomainUser"]);
+
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("CreatedName")))
+                                {
+                                    emp.CreatedBy = Convert.ToString(dataReader["CreatedName"]);
+                                }
+                                //if (!dataReader.IsDBNull(dataReader.GetOrdinal("CreatedDate")))
+                                //{
+                                //    emp.CreatedDate = Convert.ToDateTime(dataReader["CreatedDate"]);
+                                //}
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("ModifyName")))
+                                {
+                                    emp.ModifyBy = Convert.ToString(dataReader["ModifyName"]);
+                                }
+                                if (!dataReader.IsDBNull(Convert.ToInt32(dataReader.GetOrdinal("ModifyDate"))))
+                                {
+                                    emp.ModifyDate = Convert.ToString(dataReader["ModifyDate"]);
+                                }
+                                if (!dataReader.IsDBNull(Convert.ToInt32(dataReader.GetOrdinal("LastAction"))))
+                                {
+                                    emp.LastAction = Convert.ToChar(dataReader["LastAction"]);
+                                }
+                                //if (!dataReader.IsDBNull(Convert.ToInt32(dataReader.GetOrdinal("CeaseDate"))))
+                                //{
+                                //    emp.CeaseDate = Convert.ToString(dataReader["CeaseDate"]);
+                                //}
+                                empDetails.Add(emp);
+                            }
+                        }
+
+
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return empDetails;
+        }
+
+        public Int32 saveDetails(EmployeeBasicDetails empbasic)
+        {
+            SqlConnection sqlConnection = new SqlConnection();
+            int result;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_SubmitEmployeeBasicDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        sqlCommand.Parameters.Add("@p_EmployeeId", Convert.ToInt32(empbasic.EmployeeId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_FirstName", empbasic.FirstName));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_MiddleName", empbasic.MiddleName));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LastName", empbasic.LastName));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_Gender", empbasic.Gender));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DateOfBirth", DateTime.ParseExact(empbasic.DateOfBirth, "dd/MM/yyyy", null)));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ContactNo", empbasic.ContactNo));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DateOfJoining", DateTime.ParseExact(empbasic.DateOfJoining, "dd/MM/yyyy", null)));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_TechId", empbasic.TechId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DepartmentId", empbasic.DeptId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DomainUser", empbasic.DomainUser));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_CreatedDate", empbasic.CreatedDate));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_CreatedBy", empbasic.CreatedBy));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LastAction", empbasic.LastAction));
+
+                        if (sqlConnection.State == ConnectionState.Closed)
+                        {
+                            sqlConnection.Open();
+                        }
+                        result = sqlCommand.ExecuteNonQuery();
+                        sqlCommand.Dispose();
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return result;
+        }
+
+        public DataSet updateDetails(EmployeeBasicDetails empbasic)
+        {
+            SqlConnection sqlConnection = new SqlConnection();
+            DataSet dataSet = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_SubmitEmployeeBasicDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        //sqlCommand.Parameters.Add("@p_EmployeeId", Convert.ToInt32(empbasic.EmployeeId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_EmployeeId", empbasic.EmployeeId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_FirstName", empbasic.FirstName));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_MiddleName", empbasic.MiddleName));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LastName", empbasic.LastName));
+                        //sqlCommand.Parameters.Add(new SqlParameter("@p_Gender", empbasic.Gender));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DateOfBirth", DateTime.ParseExact(empbasic.DateOfBirth, "dd/MM/yyyy", null)));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ContactNo", empbasic.ContactNo));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_DateOfJoining", DateTime.ParseExact(empbasic.DateOfJoining, "dd/MM/yyyy", null)));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_TechId", empbasic.TechId));
+                        //sqlCommand.Parameters.Add(new SqlParameter("@p_DepartmentId", empbasic.DeptId));
+                        //sqlCommand.Parameters.Add(new SqlParameter("@p_DomainUser", empbasic.DomainUser));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ModifyBy", empbasic.ModifyBy));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ModifyDate", DateTime.ParseExact(empbasic.ModifyDate, "dd/MM/yyyy", null)));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_LastAction", empbasic.LastAction));
+                        if (empbasic.LastAction == 'D')
+                        {
+                            sqlCommand.Parameters.Add(new SqlParameter("@p_CeaseDate", DateTime.ParseExact(empbasic.CeaseDate, "dd/MM/yyyy", null)));
+                        }
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        dataSet = new DataSet();
+                        sqlDataAdapter.Fill(dataSet);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return dataSet;
+        }
+
+        #endregion
+
+        public DataSet ValidateUser(string domainUser)
+        {
+            SqlConnection sqlConnection = null;
+            DataSet dataSet = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_validate_user", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@P_DomainUser", domainUser.ToLower()));
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        dataSet = new DataSet();
+                        sqlDataAdapter.Fill(dataSet);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return dataSet;
+        }
+
+        public DataSet GetMenuList(int employeeId)
+        {
+            SqlConnection sqlConnection = null;
+            DataSet dataSet = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_GetMenuDetailsRoleBased", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@P_EmployeeId", employeeId));
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        dataSet = new DataSet();
+                        sqlDataAdapter.Fill(dataSet);
+                        sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return dataSet;
+        }
+
+
+        #region Entry Module for Employee
+        //Entry Module for Employee
+
+        public dynamic YearList()
+        {
+            try
+            {
+                SqlConnection sqlConnection = null;
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    sqlConnection.Open();
+                    string SqlStringTemp = "exec proc_GetFinancialYearDetails";
+                    SqlCommand sqlCommand = new SqlCommand(SqlStringTemp, sqlConnection);
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                    var list = new List<FYBase>();
+
+                    try
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new FYBase() { FinancialYearId = reader["FinancialYearId"].ToString(), FinancialYear = reader["FinancialYear"].ToString(), CurrentFlag = Convert.ToBoolean(reader["CurrentFlag"]) });
+                        }
+                    }
+                    catch (SqlException se)
+                    { }
+                    finally
+                    {
+                        sqlConnection.Close();
+                        sqlConnection.Dispose();
+                    }
+                    return list;
+                }
+            }
+            catch (SqlException se)
+            {
+                return null;
+            }
+        }
+
+        public dynamic HeadList(int FYId)
+        {
+            try
+            {
+                SqlConnection sqlConnection = null;
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_GetHeadList", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_fyid", FYId));
+                        sqlConnection.Open();
+
+                        SqlDataReader reader = sqlCommand.ExecuteReader();
+                        var list = new List<EntryModuleForEmployeeBase>();
+
+                        try
+                        {
+                            while (reader.Read())
+                            {
+                                list.Add(new EntryModuleForEmployeeBase() { SecExemID = Convert.ToInt32(reader["SecExemID"]), Head = reader["HeadName"].ToString(), Abbreviation = reader["Abbreviation"].ToString() });
+                            }
+                        }
+                        catch (SqlException se)
+                        { }
+                        finally
+                        {
+                            sqlConnection.Close();
+                            sqlConnection.Dispose();
+                        }
+                        return list;
+                    }
+                }
+            }
+            catch (SqlException se)
+            {
+                return se;
+            }
+        }
+
+        public dynamic BasisList()
+        {
+            try
+            {
+                SqlConnection sqlConnection = null;
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    sqlConnection.Open();
+                    string SqlStringTemp = "exec proc_GetBasisList";
+                    SqlCommand sqlCommand = new SqlCommand(SqlStringTemp, sqlConnection);
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                    var list = new List<EntryModuleForEmployeeBase>();
+
+                    try
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new EntryModuleForEmployeeBase() { BasisId = Convert.ToInt32(reader["BasisId"]), Basis = reader["BasisName"].ToString() });
+                        }
+                    }
+                    catch (SqlException se)
+                    { }
+                    finally
+                    {
+                        sqlConnection.Close();
+                        sqlConnection.Dispose();
+                    }
+                    return list;
+                }
+            }
+            catch (SqlException se)
+            {
+                return null;
+            }
+        }
+
+        public string GetEmployeeDocumentCount(int EmployeeId, int FYId , string ext, string headName)
+        {
+            try
+            {
+                SqlConnection sqlConnection = null;
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    sqlConnection.Open();
+                    string SqlStringTemp = "proc_GetEmpLastDocName";
+                    using (SqlCommand sqlCommand = new SqlCommand(SqlStringTemp, sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_fyid", FYId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_empid", EmployeeId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_ext", ext));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_headname", headName));
+
+
+                        SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                        string DocName = "";
+
+                        try
+                        {
+                            while (reader.Read())
+                            {
+                                DocName = reader["ServerDocName"].ToString();
+                            }
+                        }
+                        catch (SqlException se)
+                        { }
+                        finally
+                        {
+                            sqlConnection.Close();
+                            sqlConnection.Dispose();
+                        }
+                        return DocName;
+                    }
+                }
+            }
+            catch (SqlException se)
+            {
+                return null;
+            }
+            
+        }
+
+        public DataSet SubmitEmployeeDocuments(EntryModuleForEmployeeBase EMEBaseObj)
+        {
+            SqlConnection sqlConnection = null;
+            DataSet dataSet = null;
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_SubmitEmpDocDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.AddWithValue("@p_EmpDocId", 0);
+                        sqlCommand.Parameters.AddWithValue("@p_EmpId", Convert.ToInt32(EMEBaseObj.EmpId));
+                        sqlCommand.Parameters.AddWithValue("@p_FinancialYearId", Convert.ToInt32(EMEBaseObj.FY));
+                        sqlCommand.Parameters.AddWithValue("@p_HeadName", Convert.ToString(EMEBaseObj.Head));
+                        sqlCommand.Parameters.AddWithValue("@p_UserDocName", Convert.ToString(EMEBaseObj.User_Doc_Name));
+                        sqlCommand.Parameters.AddWithValue("@p_UserDocPath", Convert.ToString(EMEBaseObj.User_Doc_Path));
+                        sqlCommand.Parameters.AddWithValue("@p_ServerDocName", Convert.ToString(EMEBaseObj.Server_Doc_Name));
+                        sqlCommand.Parameters.AddWithValue("@p_ServerDocPath", Convert.ToString(EMEBaseObj.Server_Doc_Path));
+                        sqlCommand.Parameters.AddWithValue("@p_CreatedBy", Convert.ToString(EMEBaseObj.CreatedBy));
+                        sqlCommand.Parameters.AddWithValue("@p_CreatedDate ", Convert.ToDateTime(EMEBaseObj.CreatedDate));
+                        sqlCommand.Parameters.AddWithValue("@p_LastAction ", Convert.ToChar(EMEBaseObj.LastAction));
+
+                        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                        dataSet = new DataSet();
+                        sqlDataAdapter.Fill(dataSet);
+                    }
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    if (dataSet.Tables[0].Columns.Contains("MessageId"))
+                    {
+                        if (Convert.ToInt32(dataSet.Tables[0].Rows[0]["MessageId"]) > 0)
+                        {
+                            using (SqlCommand sqlCommand = new SqlCommand("proc_SubmitEmpSubDocDetails", sqlConnection))
+                            {
+                                sqlCommand.CommandType = CommandType.StoredProcedure;
+                                //dataSet = new DataSet();
+                                sqlCommand.Parameters.Add("@p_EmpSubDocId", SqlDbType.Int);
+                                sqlCommand.Parameters.Add("@p_EmpDocId", SqlDbType.Int);
+                                sqlCommand.Parameters.Add("@p_InvoiceDate", SqlDbType.DateTime);
+                                sqlCommand.Parameters.Add("@p_InvoiceAmount", SqlDbType.Decimal);
+                                sqlCommand.Parameters.Add("@p_Remarks", SqlDbType.Text);
+                                sqlCommand.Parameters.Add("@p_LastAction", SqlDbType.Char);
+
+                                sqlConnection.Open();
+
+                                for (int iCount = 0; iCount < EMEBaseObj.InvoiceDetails.Count; iCount++)
+                                {
+                                    //sqlCommand.CommandType = CommandType.StoredProcedure;
+                                    sqlCommand.Parameters["@p_EmpSubDocId"].Value = 0;
+                                    sqlCommand.Parameters["@p_EmpDocId"].Value = Convert.ToInt32(dataSet.Tables[0].Rows[0]["MessageId"]);
+                                    sqlCommand.Parameters["@p_InvoiceDate"].Value = DateTime.ParseExact(EMEBaseObj.InvoiceDetails[iCount].Invoice_Date, "dd/MM/yyyy", null);
+                                    sqlCommand.Parameters["@p_InvoiceAmount"].Value = Convert.ToDecimal(EMEBaseObj.InvoiceDetails[iCount].Invoice_Amt);
+                                    sqlCommand.Parameters["@p_Remarks"].Value = Convert.ToString(EMEBaseObj.InvoiceDetails[iCount].Invoice_Remark);
+                                    sqlCommand.Parameters["@p_LastAction"].Value = Convert.ToChar(EMEBaseObj.LastAction);
+
+                                    sqlCommand.ExecuteNonQuery();
+                                }
+                                sqlConnection.Close();
+                            }
+                        }
+                        else
+                            sqlConnection.Close();
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return dataSet;
+        }
+
+        public List<EntryModuleForEmployeeBase> GetPreviousEmployeeDetails(int EmpId, int FyId)
+        {
+            SqlConnection sqlConnection = null;
+            List<EntryModuleForEmployeeBase> DocumentUploadDetails = new List<EntryModuleForEmployeeBase>();
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_get_EmpDocDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_empid", EmpId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_fyid", FyId));
+
+                        sqlConnection.Open();
+                        using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                        {
+
+                            //document.InvoiceDetails = new List<InvoiceDetails>();
+                            int iCount = 0;
+                            while (dataReader.Read())
+                            {
+                                EntryModuleForEmployeeBase document = new EntryModuleForEmployeeBase();
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("EmpDocId")))
+                                {
+                                    document.EmpDocId = Convert.ToInt32(dataReader["EmpDocId"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("HeadName")))
+                                {
+                                    document.Head = Convert.ToString(dataReader["HeadName"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("Limit")))
+                                {
+                                    document.Limit = Convert.ToInt32(dataReader["Limit"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("Submitted")))
+                                {
+                                    document.Submitted = Convert.ToInt32(dataReader["Submitted"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("Approved")))
+                                {
+                                    document.Approved = Convert.ToInt32(dataReader["Approved"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("Remaining")))
+                                {
+                                    document.Remaining= Convert.ToInt32(dataReader["Remaining"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("Approval_Pending")))
+                                {
+                                    document.Approval_Pending = Convert.ToInt32(dataReader["Approval_Pending"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("Final_Remaining")))
+                                {
+                                    document.Final_Remaining = Convert.ToInt32(dataReader["Final_Remaining"]);
+                                }
+                                DocumentUploadDetails.Add(document);
+                                iCount++;
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return DocumentUploadDetails;
+        }
+
+        public List<EntryModuleForEmployeeBase> GetPreviousEmployeeSingleDocDetails(int EmpId, int FyId, string Head, int RowId)
+        {
+            SqlConnection sqlConnection = null;
+            List<EntryModuleForEmployeeBase> DocumentUploadDetails = new List<EntryModuleForEmployeeBase>();
+            try
+            {
+                using (sqlConnection = new SqlConnection(this.config.EmsConnectionString))
+                {
+                    using (SqlCommand sqlCommand = new SqlCommand("proc_get_SingleDocDetails", sqlConnection))
+                    {
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_empid", EmpId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_fyid", FyId));
+                        sqlCommand.Parameters.Add(new SqlParameter("@p_headname", Head));
+                        sqlCommand.Parameters.Add(new SqlParameter("@rowId", RowId));
+
+                        sqlConnection.Open();
+                        using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                        {
+
+                            //document.InvoiceDetails = new List<InvoiceDetails>();
+                            //int iCount = 0;
+                            while (dataReader.Read())
+                            {
+                                EntryModuleForEmployeeBase document = new EntryModuleForEmployeeBase();
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("EmpSubDocId")))
+                                {
+                                    document.EmpSubDocId = Convert.ToInt32(dataReader["EmpSubDocId"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("EmpDocId")))
+                                {
+                                    document.EmpDocId = Convert.ToInt32(dataReader["EmpDocId"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("EmpSubDocId")))
+                                {
+                                    document.EmpSubDocId = Convert.ToInt32(dataReader["EmpSubDocId"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("InvoiceDate")))
+                                {
+                                    //InvoiceDetails id = new InvoiceDetails();
+                                    //id.Invoice_Date = Convert.ToDateTime(dataReader["InvoiceDate"]);
+                                    //document.InvoiceDetails.Add(id);
+                                    document.Invoice_Date = Convert.ToDateTime(dataReader["InvoiceDate"]);
+
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("InvoiceAmount")))
+                                {
+                                    //InvoiceDetails id = new InvoiceDetails();
+                                    //id.Invoice_Amt = Convert.ToString(dataReader["InvoiceAmount"]);
+                                    //document.InvoiceDetails.Add(id);
+                                    document.Invoice_Amt = Convert.ToString(dataReader["InvoiceAmount"]);
+
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("ApprovedAmount")))
+                                {
+                                    document.ApprovedAmount = Convert.ToString(dataReader["ApprovedAmount"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("esdModifyBy")))
+                                {
+                                    document.ModifyDate = Convert.ToDateTime(dataReader["esdModifyBy"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("esdLastAction")))
+                                {
+                                    document.LastAction = Convert.ToChar(dataReader["esdLastAction"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("esdModifyBy")))
+                                {
+                                    document.ModifyBy = Convert.ToString(dataReader["esdModifyBy"]);
+                                }
+                                if (!dataReader.IsDBNull(dataReader.GetOrdinal("esdCeaseDate")))
+                                {
+                                    document.CeaseDate = Convert.ToDateTime(dataReader["esdCeaseDate"]);
+                                }
+
+                                DocumentUploadDetails.Add(document);
+                                //iCount++;
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                if (sqlConnection != null && sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return DocumentUploadDetails;
+        }
+
+        #endregion
+    }
+}

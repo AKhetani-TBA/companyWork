@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>..::: The Beast Apps :::..</title>
+    @*    @Styles.Render("~/Content/css")*@
+    @* <link href="@Url.Content("~/Content/css")" rel="stylesheet" />*@
+    <link href="@Url.Content("~/Content/themes/css/opensans.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/css/bootstrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/css/font-awesome.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/css/style.css")" rel="stylesheet" />
+
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <!-- Header Start -->
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <div class="logo">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="180px" height="100%" viewBox="0 0 293.75 42.188" enable-background="new 0 0 293.75 42.188" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path fill="#75A541" d="M17.798,6h-5.085v22.694h-5.37V6H2.391V0.782h15.407V6z" />
+                                <path fill="#75A541" d="M41.517,28.693h-5.351V16.436h-9.374v12.258h-5.37V0.782h5.37v10.531h9.374V0.782h5.351V28.693z" />
+                                <path fill="#75A541" d="M63.129,28.693H47.892V0.782h15.237v5.18h-9.943v5.085h9.943v5.085h-9.943v7.362h9.943V28.693z" />
+                                <path fill="#75A541" d="M98.498,20.547c0,1.507-0.389,2.915-1.167,4.226s-1.837,2.294-3.178,2.952
+                            c-1.278,0.646-3.042,0.969-5.294,0.969h-7.817V0.782h4.383c2.505,0,4.364,0.164,5.579,0.493c1.645,0.442,2.954,1.245,3.928,2.407
+                            c1.025,1.201,1.537,2.635,1.537,4.303c0,2.123-0.956,3.899-2.865,5.327C96.866,14.843,98.498,17.255,98.498,20.547z M91.307,8.675
+                            c0-1.897-1.197-2.846-3.592-2.846h-1.361v5.882h1.153C90.04,11.711,91.307,10.699,91.307,8.675z M93.261,20.374
+                            c0-2.6-1.937-3.9-5.809-3.9h-1.098v7.173h1.325c1.665,0,2.896-0.152,3.69-0.457C92.63,22.695,93.261,21.756,93.261,20.374z" />
+                                <path fill="#75A541" d="M118.839,28.693h-15.237V0.782h15.237v5.18h-9.943v5.085h9.943v5.085h-9.943v7.362h9.943V28.693z" />
+                                <path fill="#75A541" d="M148.42,28.693h-5.502l-2.185-5.749h-11.398l-2.28,5.749h-5.502l10.751-27.912h5.385L148.42,28.693z
+                             M138.738,17.783l-3.705-9.62l-3.724,9.62H138.738z" />
+                                <path fill="#75A541" d="M167.661,21.483c0,2.403-0.835,4.339-2.504,5.806c-1.594,1.404-3.612,2.106-6.053,2.106
+                            c-3.959,0-6.951-2.018-8.975-6.053l4.459-2.694c1.338,2.479,2.877,3.719,4.619,3.719c0.808,0,1.527-0.235,2.158-0.706
+                            c0.707-0.508,1.06-1.156,1.06-1.945c0-0.826-0.467-1.735-1.402-2.727c-0.367-0.394-1.162-1.093-2.387-2.098
+                            c-2.286-1.87-3.839-3.272-4.66-4.208c-1.692-1.908-2.538-3.759-2.538-5.554c0-2.047,0.778-3.746,2.333-5.098
+                            c1.48-1.301,3.257-1.952,5.332-1.952c2.795,0,5.484,1.499,8.064,4.497l-3.928,3.472c-1.375-1.936-2.775-2.903-4.2-2.903
+                            c-0.581,0-1.104,0.153-1.571,0.457c-0.53,0.355-0.794,0.812-0.794,1.37c0,0.47,0.158,0.914,0.474,1.332
+                            c0.441,0.583,1.736,1.783,3.883,3.597c2.058,1.733,3.283,2.802,3.674,3.207C166.675,17.119,167.661,19.244,167.661,21.483z" />
+                                <path fill="#75A541" d="M185.421,6h-5.085v22.694h-5.37V6h-4.952V0.782h15.407V6z" />
+                                <path fill="#75A541" d="M226.653,28.693h-5.503l-2.185-5.749h-11.398l-2.28,5.749h-5.502l10.751-27.912h5.385L226.653,28.693z
+                             M216.971,17.783l-3.705-9.62l-3.724,9.62H216.971z" />
+                                <path fill="#75A541" d="M247.336,8.875c0,1.882-0.493,3.481-1.48,4.795c-0.986,1.314-2.385,2.23-4.193,2.748
+                            c-1.012,0.291-2.878,0.436-5.598,0.436v11.84h-5.313V0.782h5.636c2.44,0,4.263,0.164,5.464,0.493
+                            c1.923,0.505,3.365,1.529,4.327,3.07C246.949,5.608,247.336,7.118,247.336,8.875z M242.175,8.875c0-1.079-0.416-1.866-1.249-2.361
+                            c-0.617-0.368-1.74-0.552-3.367-0.552h-1.494v5.73h1.684c2.106,0,3.437-0.412,3.991-1.237
+                            C242.029,10.023,242.175,9.497,242.175,8.875z" />
+                                <path fill="#75A541" d="M269.1,8.875c0,1.882-0.493,3.481-1.48,4.795c-0.986,1.314-2.385,2.23-4.193,2.748
+                            c-1.012,0.291-2.878,0.436-5.598,0.436v11.84h-5.313V0.782h5.636c2.44,0,4.263,0.164,5.464,0.493
+                            c1.923,0.505,3.365,1.529,4.327,3.07C268.713,5.608,269.1,7.118,269.1,8.875z M263.938,8.875c0-1.079-0.416-1.866-1.249-2.361
+                            c-0.617-0.368-1.74-0.552-3.367-0.552h-1.494v5.73h1.684c2.106,0,3.437-0.412,3.991-1.237
+                            C263.793,10.023,263.938,9.497,263.938,8.875z" />
+                                <path fill="#75A541" d="M289.421,21.483c0,2.403-0.835,4.339-2.505,5.806c-1.594,1.404-3.611,2.106-6.053,2.106
+                            c-3.959,0-6.951-2.018-8.975-6.053l4.459-2.694c1.338,2.479,2.877,3.719,4.618,3.719c0.808,0,1.527-0.235,2.158-0.706
+                            c0.706-0.508,1.06-1.156,1.06-1.945c0-0.826-0.467-1.735-1.401-2.727c-0.366-0.394-1.162-1.093-2.387-2.098
+                            c-2.286-1.87-3.839-3.272-4.66-4.208c-1.692-1.908-2.538-3.759-2.538-5.554c0-2.047,0.778-3.746,2.334-5.098
+                            c1.48-1.301,3.258-1.952,5.332-1.952c2.796,0,5.483,1.499,8.064,4.497L285,8.049c-1.375-1.936-2.775-2.903-4.2-2.903
+                            c-0.581,0-1.104,0.153-1.57,0.457c-0.53,0.355-0.795,0.812-0.795,1.37c0,0.47,0.158,0.914,0.474,1.332
+                            c0.441,0.583,1.736,1.783,3.883,3.597c2.059,1.733,3.283,2.802,3.675,3.207C288.436,17.119,289.421,19.244,289.421,21.483z" />
+                            </g>
+                        </g>
+                        <rect y="35.071" fill="#75A541" width="293.786" height="7.211" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container-fluid top">
+        <!-- Left Start -->
+        <div class="sidebar-nav nav-collapse collapse">
+            <div class="user_side clearfix">
+                <img src="~/Content/themes/images/odinn.jpg" />
+                <div class="media_body">
+                    <div class="welcome">Welcome</div>
+                    <div class="media_author">Abhishek Khetani</div>
+                </div>
+            </div>
+            <div class="leftMain" id="leftAccordion">
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse1"><i class="fa fa-user"></i>Employees </a><i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse1" class="collapse menuMainInner">
+                        <a href="~/Employee/AddEmployeeBasicDetails"><i class="fa fa-user"></i>Basic Details </a>
+                        <a href="~/UploadEmployeeDocuments/Index"><i class="fa fa-user"></i>Upload Documents</a>
+                        @*                        <a><i>
+                            @Html.ActionLink("Upload User","UploadFile", "UploadEmployeeDocuments",)
+                        </i></a>*@
+                        @*<a href="#"><i class="fa fa-calendar-check-o"></i> Apply Leaves</a>
+                            <a href="#"><i class="fa fa-calendar"></i> Attendance</a>
+                            <a href="#"><i class="fa fa-user"></i> Personal Page</a>
+                            <a href="#"><i class="fa fa-group"></i> Family Page</a>*@
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse2"><i class="fa fa-credit-card"></i>Card</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse2" class="collapse menuMainInner">
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse3"><i class="fa fa-user-plus"></i>Leave</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse3" class="collapse menuMainInner">
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse4"><i class="fa fa-list-alt"></i>Attendance</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse4" class="collapse menuMainInner">
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse5"><i class="fa fa-money"></i>Payroll</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse5" class="collapse menuMainInner">
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse6"><i class="fa fa-graduation-cap"></i>Masters</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse6" class="collapse menuMainInner">
+                        <a href="~/Department/Index"><i class="fa fa-user"></i>Department </a>
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse7"><i class="fa fa-inr"></i>Salary / IT Masters</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse7" class="collapse menuMainInner">
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse8"><i class="fa fa-file-text"></i>Leaves Policy</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse8" class="collapse menuMainInner">
+                        <a href="#"><i class="fa fa-user"></i>Link 1</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+                <div class="panel menuMain">
+                    <div class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse9"><i class="fa fa-user-secret"></i>Administration</a> <i class="indicator glyphicon glyphicon-chevron-right"></i></div>
+                    <div id="collapse9" class="collapse menuMainInner">
+                        <a href="~/DocumentUploadAdmin/Index"><i class="fa fa-user"></i>Investment Docs to Submit</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 2</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 3</a>
+                        <a href="#"><i class="fa fa-user"></i>Link 4</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left End -->
+        <!-- Main container Start -->
+        <div class="main_container">
+            @RenderBody()
+        </div>
+        <!-- Main container End -->
+    </div>
+
+
+
+    @* @Scripts.Render("~/bundles/jquery")
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/common.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment.js")"></script>
+    <script src="@Url.Content("~/Scripts/datetimepicker.js")"></script>
+
+    @RenderSection("scripts", required: false)
+    @RenderSection("MyScripts", required: false)*@
+    @Scripts.Render("~/bundles/jquery")
+
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+
+
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/common.js")"></script>
+    <script src="@Url.Content("~/Scripts/moment.js")"></script>
+    <script src="@Url.Content("~/Scripts/datetimepicker.js")"></script>
+
+    @RenderSection("scripts", required: false)
+    @RenderSection("MyScripts", required: false)
+</body>
+</html>

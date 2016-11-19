@@ -1,0 +1,66 @@
+﻿@model EMS_BASE.Models.EmployeeBasicDetails
+@{
+    ViewBag.Title = "WelcomePage";
+    Layout = "~/Views/Shared/_HRLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2 class="topHeading">Welcome to The Beast Apps</h2>
+        @*@for (var i = 0; i < Model.MenuDetails.Count; i++)
+        {
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftAccordion" href="#collapse1">
+                <i class="fa fa-user"></i>
+                @Html.Label(Model.MenuDetails[i].MenuName)
+            </a> <i class="indicator glyphicon glyphicon-chevron-right"></i>
+        }*@
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p>Vyapar Capital Market Partners LLC® is a brokerage firm specializing in over-the-counter (OTC) derivatives products requiring high levels of analytic knowledge, technical support, and overall market expertise.</p>
+                <p>We were founded in 2005 by a team of highly-experienced financial professionals who saw a need for a firm with the following characteristics:</p>
+                <ul class="welcome">
+                    <li>Able to move quickly into new markets;</li>
+                    <li>Able to act flexibly when existing markets undergo periods of rapid evolution</li>
+                    <li>Not limited or constrained by the hierarchical structure of traditional companies, and</li>
+                    <li>Offering electronic and hybrid brokerage services</li>
+                </ul>
+                <p>VCM’s professionals are uniquely committed to their clients and the firm due to our being a partnership; and our flat organizational structure allows us to provide the best use of our firm’s intellectual resources in devising customized solutions for our clients.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <a href="#">
+                    <ul class="homeColorBoxMain bg-liteGreen">
+                        <li><i class="fa fa-user"></i></li>
+                        <li>Users</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <a href="#">
+                    <ul class="homeColorBoxMain bg-liteBlue">
+                        <li><i class="fa fa-calendar"></i></li>
+                        <li>Calendar</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <a href="#">
+                    <ul class="homeColorBoxMain bg-liteRed">
+                        <li><i class="fa fa-bar-chart"></i></li>
+                        <li>Analytics</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <a href="#">
+                    <ul class="homeColorBoxMain bg-litePurple">
+                        <li><i class="fa fa-sitemap"></i></li>
+                        <li>Categories</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

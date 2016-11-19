@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Demo_EMS" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=INDIADEV;Initial Catalog=Demo_EMS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Demo_EMSConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Table_1" Member="Table_1s">
+    <Type Name="Table_1">
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="ProjectGroupEmail" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LastAction" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
